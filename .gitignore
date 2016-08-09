@@ -7,3 +7,11 @@ Thumbs.db
 *.psd
 *.ai
 *.pdf
+
+package.json
+gulpfile.js
+webpack.config.js
+.eslintrc
+.eslintignore
+src/
+html-backup/
