@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <div class="container">
         <div class="logo">
           <a class="logo__link" href="index.html">
-            <img class="logo__image" src="img/logo/img/logo.png" alt="Glaccy shop" width="153" height="63">
+            <img class="logo__image" src="img/logo/img/logo.svg" alt="Glaccy shop" width="153" height="63">
           </a>
         </div>
         <nav class="page-navigation">
@@ -67,15 +68,15 @@
             </form>
           </div>
           <div class="basket hidden">
-            <table class="basker__table">
+            <table class="basket__table">
               <tfoot class="basket__footer">Итого: 750 руб.</tfoot>
               <tbody class="basket__body">
                 <tr class="basket__row">
                   <td class="basket__cell basket__cell--remove">
-                    <button class="btn btn--remove" type="button">
+                    <button class="btn btn--remove" type="button"></button>
                   </td>
                   <td class="basket__cell basket__cell--image">
-                    <img src="img/products/img/citrus.png" alt="Citrus ice cream" width="33" height="33">
+                    <img src="img/products/img/citrus.jpg" alt="Citrus ice cream" width="33" height="33">
                   </td>
                   <td class="basket__cell basket__cell--name">Пломбир с апельсиновым джемом</td>
                   <td class="basket__cell basket__cell--price">1,5 кг х 200 руб.</td>
@@ -83,10 +84,10 @@
                 </tr>
                 <tr class="basket__row">
                   <td class="basket__cell basket__cell--remove">
-                    <button class="btn btn--remove" type="button">
+                    <button class="btn btn--remove" type="button"></button>
                   </td>
                   <td class="basket__cell basket__cell--image">
-                    <img src="img/products/img/strawberry.png" alt="Strawberry ice cream" width="33" height="33">
+                    <img src="img/products/img/strawberry.jpg" alt="Strawberry ice cream" width="33" height="33">
                   </td>
                   <td class="basket__cell basket__cell--name">Клубничный пломбир с присыпкой из белого шоколада</td>
                   <td class="basket__cell basket__cell--price">1,5 кг х 300 руб.</td>
@@ -106,9 +107,11 @@
     <main class="container">
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="index.html">Главная</a></li>
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
+        </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="catalog.html">Каталог</a></li>
+          <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+        </li>
         <li class="breadcrumbs__item">Сливочное</li>
       </ul>
       <h1 class="page-title">Сливочное мороженое</h1>
@@ -149,23 +152,23 @@
           <fieldset class="filters__group filters__group-fillers">
             <legend class="filters__group-title">Наполнители</legend>
             <div class="filters__group-item">
-              <input class="input input--checkbox" type="checkbox" name="fillers-choco" id="fillers-choco">
+              <input class="input input--ckeckbox" type="checkbox" name="fillers-choco" id="fillers-choco">
               <label class="label" for="fillers--choco">шоколадные</label>
             </div>
             <div class="filters__group-item">
-              <input class="input input--checkbox" type="checkbox" name="fillers-sugar" id="fillers-sugar">
+              <input class="input input--ckeckbox" type="checkbox" name="fillers-sugar" id="fillers-sugar">
               <label class="label" for="fillers--sugar">сахарные присыпки</label>
             </div>
             <div class="filters__group-item">
-              <input class="input input--checkbox" type="checkbox" name="fillers-fruits" id="fillers-fruits">
+              <input class="input input--ckeckbox" type="checkbox" name="fillers-fruits" id="fillers-fruits">
               <label class="label" for="fillers--fruits">фрукты</label>
             </div>
             <div class="filters__group-item">
-              <input class="input input--checkbox" type="checkbox" name="fillers-syrup" id="fillers-syrup">
+              <input class="input input--ckeckbox" type="checkbox" name="fillers-syrup" id="fillers-syrup">
               <label class="label" for="fillers--syrup">сиропы</label>
             </div>
             <div class="filters__group-item">
-              <input class="input input--checkbox" type="checkbox" name="fillers-jam" id="fillers-jam">
+              <input class="input input--ckeckbox" type="checkbox" name="fillers-jam" id="fillers-jam">
               <label class="label" for="fillers--jam">джемы</label>
             </div>
           </fieldset>
@@ -175,7 +178,7 @@
       <section class="products">
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/citrus.png">
+            <img class="product__image" src="img/products/img/citrus.jpg">
             <figcaption class="product__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</figcaption>
             <div class="product__price">
               <span class="product__price-value">310 &#8381;</span>
@@ -186,29 +189,29 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/coffee.png">
+            <img class="product__image" src="img/products/img/coffee.jpg">
             <figcaption class="product__name">Сливочно-кофейное с кусочками шоколада</figcaption>
             <div class="product__price">
               <span class="product__price-value">380 &#8381;</span>
-                <span class="product__price-weight">/кг</span>
-              </div>
-            </a>
+              <span class="product__price-weight">/кг</span>
+            </div>
+          </a>
           <button class="btn btn--show hidden" type="button">Быстрый просмотр</button>
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/strawberry.png">
+            <img class="product__image" src="img/products/img/strawberry.jpg">
             <figcaption class="product__name">Сливочно-клубничное с присыпкой из белого шоколада</figcaption>
             <div class="product__price">
               <span class="product__price-value">355 &#8381;</span>
-                <span class="product__price-weight">/кг</span>
-              </div>
-            </a>
+              <span class="product__price-weight">/кг</span>
+            </div>
+          </a>
           <button class="btn btn--show hidden" type="button">Быстрый просмотр</button>
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/creme-brulee.png">
+            <img class="product__image" src="img/products/img/creme-brulee.jpg">
             <figcaption class="product__name">Сливочное крем-брюле с карамельной подливкой</figcaption>
             <div class="product__price">
               <span class="product__price-value">415 &#8381;</span>
@@ -219,7 +222,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/cowberry.png">
+            <img class="product__image" src="img/products/img/cowberry.jpg">
             <figcaption class="product__name">Сливочное с брусничным джемом</figcaption>
             <div class="product__price">
               <span class="product__price-value">325 &#8381;</span>
@@ -230,7 +233,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/blackberry.png">
+            <img class="product__image" src="img/products/img/blackberry.jpg">
             <figcaption class="product__name">Сливочно-черничное с цельными ягодами черники</figcaption>
             <div class="product__price">
               <span class="product__price-value">410 &#8381;</span>
@@ -241,7 +244,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/lemon.png">
+            <img class="product__image" src="img/products/img/lemon.jpg">
             <figcaption class="product__name">Сливочно-лимонное с карамельной присыпкой</figcaption>
             <div class="product__price">
               <span class="product__price-value">375 &#8381;</span>
@@ -252,7 +255,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/dark-chocolate.png">
+            <img class="product__image" src="img/products/img/dark-chocolate.jpg">
             <figcaption class="product__name">Сливочное с шоколадной стружкой</figcaption>
             <div class="product__price">
               <span class="product__price-value">320 &#8381;</span>
@@ -263,7 +266,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/vanilla.png">
+            <img class="product__image" src="img/products/img/vanilla.jpg">
             <figcaption class="product__name">Сливочно-ванильное с кусочками шоколада</figcaption>
             <div class="product__price">
               <span class="product__price-value">440 &#8381;</span>
@@ -274,7 +277,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/menthol.png">
+            <img class="product__image" src="img/products/img/menthol.jpg">
             <figcaption class="product__name">Сливочноe с ментоловым сиропом</figcaption>
             <div class="product__price">
               <span class="product__price-value">435 &#8381;</span>
@@ -285,7 +288,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/creamy.png">
+            <img class="product__image" src="img/products/img/creamy.jpg">
             <figcaption class="product__name">Сливочное с кусочками черного шоколада</figcaption>
             <div class="product__price">
               <span class="product__price-value">355 &#8381;</span>
@@ -296,7 +299,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/mint.png">
+            <img class="product__image" src="img/products/img/mint.jpg">
             <figcaption class="product__name">Сливочное с мятным сиропом</figcaption>
             <div class="product__price">
               <span class="product__price-value">420 &#8381;</span>
@@ -333,16 +336,16 @@
         <section class="social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link .social__link--twitter" href="#"></a>
+              <a class="social__link social__link--twitter" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="social__link .social__link--instagram" href="#"></a>
+              <a class="social__link social__link--instagram" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="social__link .social__link--facebook" href="#"></a>
+              <a class="social__link social__link--facebook" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="social__link .social__link--vkontakte" href="#"></a>
+              <a class="social__link social__link--vkontakte" href="#"></a>
             </li>
           </ul>
         </section>
@@ -357,10 +360,10 @@
           </div>
         </section>
         <section class="copyright">
-          <img class="copyright__logo" src="img/copyright/img/htmlAcademy.png" alt="HtmlAcademy" width="108" height="36">
+          <img class="copyright__logo" src="img/copyright/img/htmlAcademy.svg" alt="HtmlAcademy" width="108" height="36">
           <div class="copyright__text">
             <span>Сделано в</span>
-            <a class="copyright__link" href='https://htmlacademy.ru'>HTML Academy</a>
+            <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
             <span>&copy; 2016</span>
           </div>
         </section>

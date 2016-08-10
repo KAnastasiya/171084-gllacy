@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <div class="container">
         <div class="logo">
-          <img class="logo__image" src="img/logo/img/logo.png" alt="Glaccy shop" width="153" height="63">
+          <img class="logo__image" src="img/logo/img/logo.svg" alt="Glaccy shop" width="153" height="63">
         </div>
         <nav class="page-navigation">
           <ul class="page-navigation__list">
@@ -65,15 +66,15 @@
             </form>
           </div>
           <div class="basket hidden">
-            <table class="basker__table">
+            <table class="basket__table">
               <tfoot class="basket__footer">Итого: 750 руб.</tfoot>
               <tbody class="basket__body">
                 <tr class="basket__row">
                   <td class="basket__cell basket__cell--remove">
-                    <button class="btn btn--remove" type="button">
+                    <button class="btn btn--remove" type="button"></button>
                   </td>
                   <td class="basket__cell basket__cell--image">
-                    <img src="img/products/img/citrus.png" alt="Citrus ice cream" width="33" height="33">
+                    <img src="img/products/img/citrus.jpg" alt="Citrus ice cream" width="33" height="33">
                   </td>
                   <td class="basket__cell basket__cell--name">Пломбир с апельсиновым джемом</td>
                   <td class="basket__cell basket__cell--price">1,5 кг х 200 руб.</td>
@@ -81,10 +82,10 @@
                 </tr>
                 <tr class="basket__row">
                   <td class="basket__cell basket__cell--remove">
-                    <button class="btn btn--remove" type="button">
+                    <button class="btn btn--remove" type="button"></button>
                   </td>
                   <td class="basket__cell basket__cell--image">
-                    <img src="img/products/img/strawberry.png" alt="Strawberry ice cream" width="33" height="33">
+                    <img src="img/products/img/strawberry.jpg" alt="Strawberry ice cream" width="33" height="33">
                   </td>
                   <td class="basket__cell basket__cell--name">Клубничный пломбир с присыпкой из белого шоколада</td>
                   <td class="basket__cell basket__cell--price">1,5 кг х 300 руб.</td>
@@ -104,15 +105,15 @@
     <main class="container">
       <section class="slider">
         <div class="slider__item slider__item--active">
-          <p class="slider__text">Крем-брюле и пломбир с малиновым джемом</h1>
+          <p class="slider__text">Крем-брюле и пломбир с малиновым джемом</p>
           <a class="slider__link" href="#">Давайте оба!</a>
         </div>
         <div class="slider__item hidden">
-          <p class="slider__text">Шоколадный пломбир и лимонный сорбет</h1>
+          <p class="slider__text">Шоколадный пломбир и лимонный сорбет</p>
           <a class="slider__link" href="#">Давайте оба!</a>
         </div>
         <div class="slide__item hidden">
-          <p class="slider__text">Пломбир с помадкой и клубничный щербет</h1>
+          <p class="slider__text">Пломбир с помадкой и клубничный щербет</p>
           <a class="slider__link" href="#">Давайте оба!</a>
         </div>
         <ul class="slider__nav">
@@ -136,7 +137,7 @@
       <section class="hits">
         <figure class="hit">
           <a class="hit__link" href="#">
-            <img class="hit__image" src="img/products/img/citrus.png">
+            <img class="hit__image" src="img/products/img/citrus.jpg">
             <figcaption class="hit__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</figcaption>
             <div class="hit__price">
               <span class="hit__price-value">310 &#8381;</span>
@@ -146,7 +147,7 @@
         </figure>
         <figure class="hit">
           <a class="hit__link" href="#">
-            <img class="hit__image" src="img/products/img/coffee.png">
+            <img class="hit__image" src="img/products/img/coffee.jpg">
             <figcaption class="hit__name">Сливочно-кофейное с кусочками шоколада</figcaption>
             <div class="hit__price">
               <span class="hit__price-value">380 &#8381;</span>
@@ -156,7 +157,7 @@
         </figure>
         <figure class="hit">
           <a class="hit__link" href="#">
-            <img class="hit__image" src="img/products/img/strawberry.png">
+            <img class="hit__image" src="img/products/img/strawberry.jpg">
             <figcaption class="hit__name">Сливочно-клубничное с присыпкой из белого шоколада</figcaption>
             <div class="hit__price">
               <span class="hit__price-value">355 &#8381;</span>
@@ -166,27 +167,27 @@
         </figure>
         <figure class="hits">
           <a class="hit__link" href="#">
-            <img class="hit__image" src="img/products/img/creme-brulee.png">
+            <img class="hit__image" src="img/products/img/creme-brulee.jpg">
             <figcaption class="hit__name">Сливочное крем-брюле с карамельной подливкой</figcaption>
             <div class="hit__price">
               <span class="hit__price-value">415 &#8381;</span>
-                <span class="hit__price-weight">/кг</span>
-              </div>
-            </a>
-          </figure>
+              <span class="hit__price-weight">/кг</span>
+            </div>
+          </a>
+        </figure>
       </section>
       <section class="features">
         <h2 class="features__title">Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
         <div class="row">
           <div class="features__item">
             <div class="features__image">
-              <img src="img/features/img/ice_cream.png" alt="Ice cream" width="47" height="47">
+              <img src="img/features/img/ice-cream.svg" alt="Ice cream" width="47" height="47">
             </div>
             <p class="features__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
           </div>
           <div class="features__item">
             <div class="features__image">
-              <img src="img/features/img/cow.png" alt="Cow" width="47" height="47">
+              <img src="img/features/img/cow.svg" alt="Cow" width="47" height="47">
             </div>
             <p class="features__text">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
           </div>
@@ -194,15 +195,15 @@
         <div class="row">
           <div class="features__item">
             <div class="features__image">
-              <img src="img/features/img/eco.png" alt="Eco" width="47" height="47">
+              <img src="img/features/img/eco.svg" alt="Eco" width="47" height="47">
             </div>
-            <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+            <p class="features__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
           </div>
           <div class="features__item">
             <div class="features__image">
-              <img src="img/features/img/thermometer.png" alt="Thermometer" width="47" height="47">
+              <img src="img/features/img/thermometer.svg" alt="Thermometer" width="47" height="47">
             </div>
-            <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+            <p class="features__text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
           </div>
         </div>
       </section>
@@ -227,7 +228,7 @@
           </div>
           <div class="contacts__info">
             <p class="contacts__category">Для заказов по телефону:</p>
-            <p  class="contacts__value">8 812 450-25-25</p>
+            <p class="contacts__value">8 812 450-25-25</p>
             <p class="contacts__tips">(с 10 до 20 ежедневно)</p>
           </div>
           <a class="btn btn--feedbank" href="#">Форма обратной связи</a>
@@ -239,16 +240,16 @@
         <section class="social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link .social__link--twitter" href="#"></a>
+              <a class="social__link social__link--twitter" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="social__link .social__link--instagram" href="#"></a>
+              <a class="social__link social__link--instagram" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="social__link .social__link--facebook" href="#"></a>
+              <a class="social__link social__link--facebook" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="social__link .social__link--vkontakte" href="#"></a>
+              <a class="social__link social__link--vkontakte" href="#"></a>
             </li>
           </ul>
         </section>
@@ -263,30 +264,29 @@
           </div>
         </section>
         <section class="copyright">
-          <img class="copyright__logo" src="img/copyright/img/htmlAcademy.png" alt="HtmlAcademy" width="108" height="36">
+          <img class="copyright__logo" src="img/copyright/img/htmlAcademy.svg" alt="HtmlAcademy" width="108" height="36">
           <div class="copyright__text">
             <span>Сделано в</span>
-            <a class="copyright__link" href='https://htmlacademy.ru'>HTML Academy</a>
+            <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
             <span>&copy; 2016</span>
           </div>
         </section>
       </div>
     </footer>
-
     <div class="modal hidden">
       <div class="modal__dialog">
         <div class="modal__header">
           <h3 class="modal__title">Мы обязательно вам ответим!</h3>
-          <button class="btn btn--close-window" type="button"></button>
-        </header>
+          <button class="btn btn--close-modal" type="button"></button>
+        </div>
         <div class="modal__body">
           <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
             <input class="input input--text" type="text" placeholder="Как вас зовут?" name="user">
             <input class="input input--email" type="email" placeholder="Ваша почта для ответа?" name="email">
             <textarea class="textarea" placeholder="Напишите что-нибудь..." name="message"></textarea>
             <button class="btn btn--send-feedback" type="submit">Отправить</button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </body>

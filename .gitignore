@@ -13,5 +13,8 @@ gulpfile.js
 webpack.config.js
 .eslintrc
 .eslintignore
+.gulp-scss-cache/
+.sass-cache/
+.csscomb.json
 src/
 html-backup/
