@@ -8,9 +8,7 @@
     <header class="page-header">
       <div class="container">
         <div class="logo">
-          <a class="logo__link" href="index.html">
-            <img class="logo__image" src="img/logo/img/logo.png" alt="Glaccy shop" width="153" height="63">
-          </a>
+          <img class="logo__image" src="img/logo/img/logo.png" alt="Glaccy shop" width="153" height="63">
         </div>
         <nav class="page-navigation">
           <ul class="page-navigation__list">
@@ -44,9 +42,9 @@
         </nav>
         <div class="user">
           <div class="user__controls">
-            <a class="btn btn--search" href="#"></a>
-            <a class="btn btn--signin" href="#">Вход</a>
-            <a class="btn btn--basket" href="#">Пусто</a>
+            <button class="btn btn--search" type="button"></button>
+            <button class="btn btn--signin" type="button">Вход</button>
+            <button class="btn btn--basket" type="button">Пусто</button>
           </div>
           <div class="search hidden">
             <form class="search__form" action="https://echo.htmlacademy.ru" method="post">
@@ -94,7 +92,7 @@
                 </tr>
               </tbody>
             </table>
-            <a class="btn btn--order" href="#">Оформить заказ</a>
+            <button class="btn btn--order" type="button">Оформить заказ</button>
           </div>
         </div>
         <div class="phone">
@@ -181,21 +179,29 @@
         <h2 class="features__title">Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
         <div class="row">
           <div class="features__item">
-            <img class="features__image" src="img/features/img/ice_cream.png" alt="Ice cream" width="47" height="47">
+            <div class="features__image">
+              <img src="img/features/img/ice_cream.png" alt="Ice cream" width="47" height="47">
+            </div>
             <p class="features__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
           </div>
           <div class="features__item">
-            <img class="features__image" src="img/features/img/cow.png" alt="Cow" width="47" height="47">
+            <div class="features__image">
+              <img src="img/features/img/cow.png" alt="Cow" width="47" height="47">
+            </div>
             <p class="features__text">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
           </div>
         </div>
         <div class="row">
           <div class="features__item">
-            <img src="img/features/img/eco.png" alt="Eco" width="47" height="47">
+            <div class="features__image">
+              <img src="img/features/img/eco.png" alt="Eco" width="47" height="47">
+            </div>
             <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
           </div>
           <div class="features__item">
-            <img src="img/features/img/thermometer.png" alt="Thermometer" width="47" height="47">
+            <div class="features__image">
+              <img src="img/features/img/thermometer.png" alt="Thermometer" width="47" height="47">
+            </div>
             <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
           </div>
         </div>
@@ -269,7 +275,7 @@
 
     <div class="modal hidden">
       <div class="modal__dialog">
-        <header class="modal__header">
+        <div class="modal__header">
           <h3 class="modal__title">Мы обязательно вам ответим!</h3>
           <button class="btn btn--close-window" type="button"></button>
         </header>
