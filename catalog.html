@@ -15,9 +15,9 @@
         </div>
         <nav class="page-navigation">
           <ul class="page-navigation__list">
-            <li class="page-navigation__item page-navigation__item--active">
-              <a class="page-navigation__link dropdown" href="catalog.html">Каталог</a>
-              <ul class="dropdown__list hidden">
+            <li class="page-navigation__item page-navigation__item--dropdown page-navigation__item--active">
+              <a class="page-navigation__link" href="catalog.html">Каталог</a>
+              <ul class="dropdown hidden">
                 <li class="dropdown__item">
                   <a class="dropdown__link" href="#">Новинки</a>
                 </li>
@@ -51,13 +51,13 @@
           </div>
           <div class="search hidden">
             <form class="search__form" action="https://echo.htmlacademy.ru" method="post">
-              <input class="input input--search" type="search" placeholder="Что ищем?">
+              <input type="search" placeholder="Что ищем?">
             </form>
           </div>
           <div class="login hidden">
             <form class="login__form" action="https://echo.htmlacademy.ru" method="post">
-              <input class="input input--email" type="email" placeholder="Электронная почта">
-              <input class="input input--password" type="password" placeholder="Пароль">
+              <input type="email" placeholder="Электронная почта">
+              <input type="password" placeholder="Пароль">
               <div class="login__controls">
                 <button class="btn btn--login" type="submit">Войти</button>
                 <div class="login__links">
@@ -118,58 +118,58 @@
       <div class="filters">
         <form class="filters__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="filters__group filters__group--fat">
-            <legend class="filters__group-title">Сортировка</legend>
-            <select class="select" name="sort">
-              <option class="select__option" value="popular">по популярности</option>
-              <option class="select__option" value="cheap">сначала недорогие</option>
-              <option class="select__option" value="expensive">сначала дорогие</option>
-              <option class="select__option" value="fat">по жирности</option>
+            <legend>Сортировка</legend>
+            <select name="sort">
+              <option value="popular">по популярности</option>
+              <option value="cheap">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fat">по жирности</option>
             </select>
           </fieldset>
           <fieldset class="filters__group filters__group--price">
-            <legend class="filters__group-title">Цена: 100 руб. – 500 руб.</legend>
-            <input class="input input--range" type="range" min="50" max="800" step="100" value="100" name="price" id="price">
+            <legend>Цена: 100 руб. – 500 руб.</legend>
+            <input type="range" min="50" max="800" step="100" value="100" name="price" id="price">
           </fieldset>
           <fieldset class="filters__group filters__group--fat">
-            <legend class="filters__group-title">Жирность</legend>
+            <legend>Жирность</legend>
             <div class="filters__group-item">
-              <input class="input input--radio" type="radio" name="fat" id="fat-0">
-              <label class="label" for="fat0">0%</label>
+              <input type="radio" name="fat" id="fat-0">
+              <label for="fat0">0%</label>
             </div>
             <div class="filters__group-item">
-              <input class="input input--radio" type="radio" name="fat" id="fat-10">
-              <label class="label" for="fat10">до 10%</label>
+              <input type="radio" name="fat" id="fat-10">
+              <label for="fat10">до 10%</label>
             </div>
             <div class="filters__group-item">
-              <input class="input input--radio" type="radio" name="fat" id="fat-30">
-              <label class="label" for="fat-30">до 30%</label>
+              <input type="radio" name="fat" id="fat-30">
+              <label for="fat-30">до 30%</label>
             </div>
             <div class="filters__group-item">
-              <input class="input input--radio" type="radio" name="fat" id="fat-max">
-              <label class="label" for="fat-max">выше 30%</label>
+              <input type="radio" name="fat" id="fat-max">
+              <label for="fat-max">выше 30%</label>
             </div>
           </fieldset>
           <fieldset class="filters__group filters__group-fillers">
-            <legend class="filters__group-title">Наполнители</legend>
+            <legend>Наполнители</legend>
             <div class="filters__group-item">
-              <input class="input input--ckeckbox" type="checkbox" name="fillers-choco" id="fillers-choco">
-              <label class="label" for="fillers--choco">шоколадные</label>
+              <input type="checkbox" name="fillers-choco" id="fillers-choco">
+              <label for="fillers--choco">шоколадные</label>
             </div>
             <div class="filters__group-item">
-              <input class="input input--ckeckbox" type="checkbox" name="fillers-sugar" id="fillers-sugar">
-              <label class="label" for="fillers--sugar">сахарные присыпки</label>
+              <input type="checkbox" name="fillers-sugar" id="fillers-sugar">
+              <label for="fillers--sugar">сахарные присыпки</label>
             </div>
             <div class="filters__group-item">
-              <input class="input input--ckeckbox" type="checkbox" name="fillers-fruits" id="fillers-fruits">
-              <label class="label" for="fillers--fruits">фрукты</label>
+              <input type="checkbox" name="fillers-fruits" id="fillers-fruits">
+              <label for="fillers--fruits">фрукты</label>
             </div>
             <div class="filters__group-item">
-              <input class="input input--ckeckbox" type="checkbox" name="fillers-syrup" id="fillers-syrup">
-              <label class="label" for="fillers--syrup">сиропы</label>
+              <input type="checkbox" name="fillers-syrup" id="fillers-syrup">
+              <label for="fillers--syrup">сиропы</label>
             </div>
             <div class="filters__group-item">
-              <input class="input input--ckeckbox" type="checkbox" name="fillers-jam" id="fillers-jam">
-              <label class="label" for="fillers--jam">джемы</label>
+              <input type="checkbox" name="fillers-jam" id="fillers-jam">
+              <label for="fillers--jam">джемы</label>
             </div>
           </fieldset>
           <button class="btn btn--filters-apply" type="submit">Применить</button>
@@ -336,16 +336,16 @@
         <section class="social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="#"></a>
+              <a class="social__link social__link--twt" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#"></a>
+              <a class="social__link social__link--insta" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#"></a>
+              <a class="social__link social__link--fb" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#"></a>
+              <a class="social__link social__link--vk" href="#"></a>
             </li>
           </ul>
         </section>
@@ -362,9 +362,9 @@
         <section class="copyright">
           <img class="copyright__logo" src="img/copyright/img/htmlAcademy.svg" alt="HtmlAcademy" width="108" height="36">
           <div class="copyright__text">
-            <span>Сделано в</span>
+            Сделано в
             <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
-            <span>&copy; 2016</span>
+            &copy; 2016
           </div>
         </section>
       </div>
