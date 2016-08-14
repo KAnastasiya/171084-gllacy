@@ -9,7 +9,7 @@
     <header class="page-header">
       <div class="container">
         <div class="logo">
-          <img class="logo__image" src="img/logo/img/logo.svg" alt="Glaccy shop" width="153" height="63">
+          <div class="icon icon--logo"></div>
         </div>
         <nav class="page-navigation">
           <ul class="page-navigation__list">
@@ -43,8 +43,8 @@
         </nav>
         <div class="user">
           <div class="user__controls">
-            <button class="btn btn--search" type="button"></button>
-            <button class="btn btn--signin" type="button">Вход</button>
+            <button class="icon icon--search" type="button"></button>
+            <button class="btn btn--login" type="button">Вход</button>
             <button class="btn btn--basket" type="button">Пусто</button>
           </div>
           <div class="search hidden">
@@ -70,8 +70,8 @@
               <tfoot class="basket__footer">Итого: 750 руб.</tfoot>
               <tbody class="basket__body">
                 <tr class="basket__row">
-                  <td class="basket__cell basket__cell--remove">
-                    <button class="btn btn--remove" type="button"></button>
+                  <td class="basket__cell">
+                    <button class="icon icon--remove" type="button"></button>
                   </td>
                   <td class="basket__cell basket__cell--image">
                     <img src="img/products/img/citrus.jpg" alt="Citrus ice cream" width="33" height="33">
@@ -81,8 +81,8 @@
                   <td class="basket__cell basket__cell--total-price">300 руб.</td>
                 </tr>
                 <tr class="basket__row">
-                  <td class="basket__cell basket__cell--remove">
-                    <button class="btn btn--remove" type="button"></button>
+                  <td class="basket__cell">
+                    <button class="icon icon--remove" type="button"></button>
                   </td>
                   <td class="basket__cell basket__cell--image">
                     <img src="img/products/img/strawberry.jpg" alt="Strawberry ice cream" width="33" height="33">
@@ -181,29 +181,21 @@
           <h2>Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
           <div class="row">
             <div class="features__item">
-              <div class="features__image">
-                <img src="img/features/img/ice-cream.svg" alt="Ice cream" width="47" height="47">
-              </div>
+              <div class="icon icon--ice-cream"></div>
               <p class="features__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
             </div>
             <div class="features__item">
-              <div class="features__image">
-                <img src="img/features/img/cow.svg" alt="Cow" width="47" height="47">
-              </div>
+              <div class="icon icon--cow"></div>
               <p class="features__text">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
             </div>
           </div>
           <div class="row">
             <div class="features__item">
-              <div class="features__image">
-                <img src="img/features/img/eco.svg" alt="Eco" width="47" height="47">
-              </div>
+              <div class="icon icon--eco"></div>
               <p class="features__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
             </div>
             <div class="features__item">
-              <div class="features__image">
-                <img src="img/features/img/thermometer.svg" alt="Thermometer" width="47" height="47">
-              </div>
+              <div class="icon icon--thermometer"></div>
               <p class="features__text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
             </div>
           </div>
@@ -242,16 +234,16 @@
         <section class="social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--twt" href="#"></a>
+              <a class="icon icon--twitter" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--insta" href="#"></a>
+              <a class="icon icon--instagram" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--fb" href="#"></a>
+              <a class="icon icon__facebook" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--vk" href="#"></a>
+              <a class="icon icon--vkontakte" href="#"></a>
             </li>
           </ul>
         </section>
@@ -266,9 +258,9 @@
           </div>
         </section>
         <section class="copyright">
-          <img class="copyright__logo" src="img/copyright/img/htmlAcademy.svg" alt="HtmlAcademy" width="108" height="36">
+          <div class="icon icon--htmlAcademy"></div>
           <div class="copyright__text">
-            Сделано в
+            Cделано в
             <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
             &copy; 2016
           </div>
@@ -279,7 +271,7 @@
       <div class="modal__dialog">
         <div class="modal__header">
           <h2>Мы обязательно вам ответим!</h2>
-          <button class="btn btn--close-modal" type="button"></button>
+          <button class="icon icon--close" type="button"></button>
         </div>
         <div class="modal__body">
           <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">

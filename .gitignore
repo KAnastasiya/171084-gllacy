@@ -17,4 +17,4 @@ webpack.config.js
 .sass-cache/
 .csscomb.json
 src/
-html-backup/
+_backups/
