@@ -15,8 +15,8 @@
         </div>
         <nav class="page-navigation">
           <ul class="page-navigation__list">
-            <li class="page-navigation__item page-navigation__item--dropdown page-navigation__item--active">
-              <a class="page-navigation__link" href="catalog.html">Каталог</a>
+            <li class="page-navigation__item page-navigation__item--dropdown">
+              <a class="page-navigation__link--active page-navigation__link" href="catalog.html">Каталог</a>
               <ul class="dropdown hidden">
                 <li class="dropdown__item">
                   <a class="dropdown__link" href="#">Новинки</a>
@@ -76,7 +76,7 @@
                     <button class="icon icon--remove" type="button"></button>
                   </td>
                   <td class="basket__cell basket__cell--image">
-                    <img src="img/products/img/citrus.jpg" alt="Citrus ice cream" width="33" height="33">
+                    <img src="img/products/img/citrus.jpg" alt="citrus ice cream" width="33" height="33">
                   </td>
                   <td class="basket__cell basket__cell--name">Пломбир с апельсиновым джемом</td>
                   <td class="basket__cell basket__cell--price">1,5 кг х<span>200 руб.</span></td>
@@ -87,11 +87,11 @@
                     <button class="icon icon--remove" type="button"></button>
                   </td>
                   <td class="basket__cell basket__cell--image">
-                    <img src="img/products/img/strawberry.jpg" alt="Strawberry ice cream" width="33" height="33">
+                    <img src="img/products/img/strawberry.jpg" alt="strawberry ice cream" width="33" height="33">
                   </td>
                   <td class="basket__cell basket__cell--name">Клубничный пломбир с присыпкой из белого шоколада</td>
                   <td class="basket__cell basket__cell--price">1,5 кг х<span>300 руб.</span></td>
-                  <td class="basket__cell basket__cell--total-cell">450 руб.</td>
+                  <td class="basket__cell basket__cell--total-price">450 руб.</td>
                 </tr>
               </tbody>
             </table>
@@ -134,15 +134,15 @@
             <legend>Жирность</legend>
             <div class="filters__group-item">
               <input type="radio" name="fat" id="fat-0">
-              <label for="fat0">0%</label>
+              <label for="fat-0">0%</label>
             </div>
             <div class="filters__group-item">
               <input type="radio" name="fat" id="fat-10">
-              <label for="fat10">до 10%</label>
+              <label for="fat-10">до10%</label>
             </div>
             <div class="filters__group-item">
               <input type="radio" name="fat" id="fat-30">
-              <label for="fat-30">до 30%</label>
+              <label for="fat-30">до30%</label>
             </div>
             <div class="filters__group-item">
               <input type="radio" name="fat" id="fat-max">
@@ -153,23 +153,23 @@
             <legend>Наполнители</legend>
             <div class="filters__group-item">
               <input type="checkbox" name="fillers-choco" id="fillers-choco">
-              <label for="fillers--choco">шоколадные</label>
+              <label for="fillers-choco">шоколадные</label>
             </div>
             <div class="filters__group-item">
               <input type="checkbox" name="fillers-sugar" id="fillers-sugar">
-              <label for="fillers--sugar">сахарные присыпки</label>
+              <label for="fillers-sugar">сахарные присыпки</label>
             </div>
             <div class="filters__group-item">
               <input type="checkbox" name="fillers-fruits" id="fillers-fruits">
-              <label for="fillers--fruits">фрукты</label>
+              <label for="fillers-fruits">фрукты</label>
             </div>
             <div class="filters__group-item">
               <input type="checkbox" name="fillers-syrup" id="fillers-syrup">
-              <label for="fillers--syrup">сиропы</label>
+              <label for="fillers-syrup">сиропы</label>
             </div>
             <div class="filters__group-item">
               <input type="checkbox" name="fillers-jam" id="fillers-jam">
-              <label for="fillers--jam">джемы</label>
+              <label for="fillers-jam">джемы</label>
             </div>
           </fieldset>
           <button class="btn btn--filters-apply" type="submit">Применить</button>
@@ -178,7 +178,7 @@
       <section class="products">
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/citrus.jpg">
+            <img class="product__image" src="img/products/img/citrus.jpg" alt="citrus ice cream" width="267px" height="267px">
             <figcaption class="product__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</figcaption>
             <div class="product__price">
               <span class="product__price-value">310 &#8381;</span>
@@ -189,7 +189,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/coffee.jpg">
+            <img class="product__image" src="img/products/img/coffee.jpg" alt="coffee ice cream" width="267px" height="267px">
             <figcaption class="product__name">Сливочно-кофейное с кусочками шоколада</figcaption>
             <div class="product__price">
               <span class="product__price-value">380 &#8381;</span>
@@ -200,7 +200,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/strawberry.jpg">
+            <img class="product__image" src="img/products/img/strawberry.jpg" alt="strawberry ice cream" width="267px" height="267px">
             <figcaption class="product__name">Сливочно-клубничное с присыпкой из белого шоколада</figcaption>
             <div class="product__price">
               <span class="product__price-value">355 &#8381;</span>
@@ -211,7 +211,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/creme-brulee.jpg">
+            <img class="product__image" src="img/products/img/creme-brulee.jpg" alt="creme-brulee ice cream" width="267px" height="267px">
             <figcaption class="product__name">Сливочное крем-брюле с карамельной подливкой</figcaption>
             <div class="product__price">
               <span class="product__price-value">415 &#8381;</span>
@@ -222,7 +222,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/cowberry.jpg">
+            <img class="product__image" src="img/products/img/cowberry.jpg" alt="cowberry ice cream" width="267px" height="267px">
             <figcaption class="product__name">Сливочное с брусничным джемом</figcaption>
             <div class="product__price">
               <span class="product__price-value">325 &#8381;</span>
@@ -233,7 +233,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/blackberry.jpg">
+            <img class="product__image" src="img/products/img/blackberry.jpg" alt="blackberry ice cream" width="267px" height="267px">
             <figcaption class="product__name">Сливочно-черничное с цельными ягодами черники</figcaption>
             <div class="product__price">
               <span class="product__price-value">410 &#8381;</span>
@@ -244,7 +244,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/lemon.jpg">
+            <img class="product__image" src="img/products/img/lemon.jpg" alt="lemon ice cream" width="267px" height="267px">
             <figcaption class="product__name">Сливочно-лимонное с карамельной присыпкой</figcaption>
             <div class="product__price">
               <span class="product__price-value">375 &#8381;</span>
@@ -255,7 +255,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/dark-chocolate.jpg">
+            <img class="product__image" src="img/products/img/dark-chocolate.jpg" alt="dark-chocolate ice cream" width="267px" height="267px">
             <figcaption class="product__name">Сливочное с шоколадной стружкой</figcaption>
             <div class="product__price">
               <span class="product__price-value">320 &#8381;</span>
@@ -266,7 +266,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/vanilla.jpg">
+            <img class="product__image" src="img/products/img/vanilla.jpg" alt="vanilla ice cream" width="267px" height="267px">
             <figcaption class="product__name">Сливочно-ванильное с кусочками шоколада</figcaption>
             <div class="product__price">
               <span class="product__price-value">440 &#8381;</span>
@@ -277,7 +277,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/menthol.jpg">
+            <img class="product__image" src="img/products/img/menthol.jpg" alt="menthol ice cream" width="267px" height="267px">
             <figcaption class="product__name">Сливочноe с ментоловым сиропом</figcaption>
             <div class="product__price">
               <span class="product__price-value">435 &#8381;</span>
@@ -288,7 +288,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/creamy.jpg">
+            <img class="product__image" src="img/products/img/creamy.jpg" alt="creamy ice cream" width="267px" height="267px">
             <figcaption class="product__name">Сливочное с кусочками черного шоколада</figcaption>
             <div class="product__price">
               <span class="product__price-value">355 &#8381;</span>
@@ -299,7 +299,7 @@
         </figure>
         <figure class="product">
           <a class="product__link" href="#">
-            <img class="product__image" src="img/products/img/mint.jpg">
+            <img class="product__image" src="img/products/img/mint.jpg" alt="mint ice cream" width="267px" height="267px">
             <figcaption class="product__name">Сливочное с мятным сиропом</figcaption>
             <div class="product__price">
               <span class="product__price-value">420 &#8381;</span>
@@ -311,8 +311,8 @@
         <div class="pagination">
           <button class="icon icon--prev" type="button"></button>
           <ul class="pagination__list">
-            <li class="pagination__item pagination__item--active">
-              <a class="pagination__link" href="#">1</a>
+            <li class="pagination__item">
+              <a class="pagination__link--active pagination__link" href="#">1</a>
             </li>
             <li class="pagination__item">
               <a class="pagination__link" href="#">2</a>
@@ -336,16 +336,16 @@
         <section class="social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="icon icon--twitter" href="#"></a>
+              <a class="icon--twitter icon" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="icon icon--instagram" href="#"></a>
+              <a class="icon--instagram icon" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="icon icon__facebook" href="#"></a>
+              <a class="icon--facebook icon" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="icon icon--vkontakte" href="#"></a>
+              <a class="icon--vkontakte icon" href="#"></a>
             </li>
           </ul>
         </section>
