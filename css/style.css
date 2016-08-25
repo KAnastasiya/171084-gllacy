@@ -336,7 +336,8 @@ textarea {
   background-position: -129px 0;
 }
 
-.icon--cow {
+.icon--cow,
+.features__item--cow::before {
   display: block;
   width: 48px;
   height: 49px;
@@ -346,7 +347,8 @@ textarea {
   background-position: -147px 0;
 }
 
-.icon--eco {
+.icon--eco,
+.features__item--eco::before {
   display: block;
   width: 49px;
   height: 49px;
@@ -378,24 +380,15 @@ textarea {
   background-position: -276px 0;
 }
 
-.icon--htmlAcademy {
-  display: block;
-  width: 108px;
-  height: 38px;
-
-  background-image: url('../icon/sprite.svg');
-  background-repeat: no-repeat;
-  background-position: -291px 0;
-}
-
-.icon--ice-cream {
+.icon--ice-cream,
+.features__item--ice-cream::before {
   display: block;
   width: 49px;
   height: 49px;
 
   background-image: url('../icon/sprite.svg');
   background-repeat: no-repeat;
-  background-position: -399px 0;
+  background-position: -291px 0;
 }
 
 .icon--instagram,
@@ -406,7 +399,7 @@ textarea {
 
   background-image: url('../icon/sprite.svg');
   background-repeat: no-repeat;
-  background-position: -448px 0;
+  background-position: -340px 0;
 }
 
 .icon--login,
@@ -417,7 +410,7 @@ textarea {
 
   background-image: url('../icon/sprite.svg');
   background-repeat: no-repeat;
-  background-position: -480px 0;
+  background-position: -372px 0;
 }
 
 .icon--login-active,
@@ -428,17 +421,7 @@ textarea {
 
   background-image: url('../icon/sprite.svg');
   background-repeat: no-repeat;
-  background-position: -502px 0;
-}
-
-.icon--logo {
-  display: block;
-  width: 154px;
-  height: 64px;
-
-  background-image: url('../icon/sprite.svg');
-  background-repeat: no-repeat;
-  background-position: -524px 0;
+  background-position: -394px 0;
 }
 
 .icon--range-marker {
@@ -448,7 +431,7 @@ textarea {
 
   background-image: url('../icon/sprite.svg');
   background-repeat: no-repeat;
-  background-position: -678px 0;
+  background-position: -416px 0;
 }
 
 .icon--range-marker-hover {
@@ -458,7 +441,7 @@ textarea {
 
   background-image: url('../icon/sprite.svg');
   background-repeat: no-repeat;
-  background-position: -703px 0;
+  background-position: -441px 0;
 }
 
 .icon--remove {
@@ -468,7 +451,7 @@ textarea {
 
   background-image: url('../icon/sprite.svg');
   background-repeat: no-repeat;
-  background-position: -730px 0;
+  background-position: -468px 0;
 }
 
 .icon--rub,
@@ -479,7 +462,7 @@ textarea {
 
   background-image: url('../icon/sprite.svg');
   background-repeat: no-repeat;
-  background-position: -742px 0;
+  background-position: -480px 0;
 }
 
 .icon--search,
@@ -490,7 +473,7 @@ textarea {
 
   background-image: url('../icon/sprite.svg');
   background-repeat: no-repeat;
-  background-position: -775px 0;
+  background-position: -513px 0;
 }
 
 .icon--search-active,
@@ -501,17 +484,18 @@ textarea {
 
   background-image: url('../icon/sprite.svg');
   background-repeat: no-repeat;
-  background-position: -792px 0;
+  background-position: -530px 0;
 }
 
-.icon--thermometer {
+.icon--thermometer,
+.features__item--thermometer::before {
   display: block;
   width: 48px;
   height: 49px;
 
   background-image: url('../icon/sprite.svg');
   background-repeat: no-repeat;
-  background-position: -809px 0;
+  background-position: -547px 0;
 }
 
 .icon--twitter,
@@ -522,7 +506,7 @@ textarea {
 
   background-image: url('../icon/sprite.svg');
   background-repeat: no-repeat;
-  background-position: -857px 0;
+  background-position: -595px 0;
 }
 
 .icon--vkontakte,
@@ -533,7 +517,7 @@ textarea {
 
   background-image: url('../icon/sprite.svg');
   background-repeat: no-repeat;
-  background-position: -890px 0;
+  background-position: -628px 0;
 }
 
 /* -------------- Additional ------------ */
@@ -623,43 +607,6 @@ textarea {
   border-radius: 16px;
 }
 
-.container::before,
-.index-row::before,
-.modal__header::before,
-.login__controls::before,
-.footer-links::before,
-.banners::before,
-.features__row::before,
-.features__item::before,
-.subscribe__form::before,
-.filters__row::before,
-.container::after,
-.index-row::after,
-.modal__header::after,
-.login__controls::after,
-.footer-links::after,
-.banners::after,
-.features__row::after,
-.features__item::after,
-.subscribe__form::after,
-.filters__row::after {
-  content: ' ';
-
-  display: table;
-}
-.container::after,
-.index-row::after,
-.modal__header::after,
-.login__controls::after,
-.footer-links::after,
-.banners::after,
-.features__row::after,
-.features__item::after,
-.subscribe__form::after,
-.filters__row::after {
-  clear: both;
-}
-
 /* ----------- Common styles ------------ */
 * {
   box-sizing: border-box;
@@ -741,6 +688,16 @@ img {
 
 .index-row {
   background-color: purple;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: ' ';
+
+  display: table;
+}
+.clearfix::after {
+  clear: both;
 }
 
 .btn {
@@ -899,9 +856,10 @@ textarea {
 .product {
   position: relative;
 
-  display: inline-block;
+  float: left;
   width: 25%;
   margin: 0;
+  margin-bottom: 16px;
   padding: 10px 10px;
 
   font-size: 16px;
@@ -909,8 +867,8 @@ textarea {
 
   cursor: pointer;
 }
-.product:not(:nth-last-of-type(-n+4)) {
-  margin-bottom: 16px;
+.product:nth-of-type(4n+5) {
+  clear: left;
 }
 .product__container {
   position: relative;
@@ -923,7 +881,6 @@ textarea {
   position: relative;
 }
 .product img {
-  width: 100%;
   margin-bottom: 10px;
 
   border-radius: 50%;
@@ -1007,16 +964,23 @@ textarea {
 
 .logo {
   float: left;
-  width: auto;
-  height: 64px;
   margin: 10px 10px 0 0;
 
   background-color: red;
 }
+.logo__link {
+  display: block;
+  width: auto;
+  max-width: 153px;
+  height: 64px;
+}
+.logo__image {
+  display: block;
+}
 
 .page-navigation {
   float: left;
-  width: 50%;
+  width: 48%;
 
   background-color: purple;
 }
@@ -1277,15 +1241,12 @@ textarea {
   background-color: lightblue;
 }
 .basket__footer td {
-  height: 46px;
-
+  line-height: 46px;
   text-align: right;
 
   border-top: 1px solid #cacac7;
 }
 .basket__controls {
-  width: 100%;
-
   text-align: right;
 
   background-color: lightgreen;
@@ -1420,7 +1381,6 @@ textarea {
 .copyright {
   display: inline-block;
   width: 23%;
-  min-width: 190px;
   margin-top: 31px;
   margin-bottom: 31px;
 
@@ -1440,14 +1400,12 @@ textarea {
 .slider {
   position: relative;
 
-  width: 100%;
-
   background-color: green;
 }
 .slider__list {
   position: relative;
 
-  width: 665px;
+  width: 670px;
   height: 585px;
   margin: 0 auto;
   overflow: hidden;
@@ -1459,6 +1417,7 @@ textarea {
 
   width: inherit;
   height: inherit;
+  padding: 315px 0 50px;
 
   opacity: 0;
 }
@@ -1512,11 +1471,6 @@ textarea {
   background-color: rgba(248, 247, 244, 0.4);
 }
 .slider__content {
-  position: absolute;
-  right: 0;
-  bottom: 50px;
-  left: 0;
-
   text-align: center;
 }
 .slider p {
@@ -1549,7 +1503,6 @@ textarea {
   position: relative;
 
   width: 49%;
-  height: 230px;
   padding: 20px;
 
   border-radius: 16px;
@@ -1572,15 +1525,14 @@ textarea {
   line-height: 41px;
 }
 .banner__text {
+  margin-bottom: 24px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
 }
-
-.btn--banner {
-  position: absolute;
-  right: 20px;
-  bottom: 24px;
+.banner__controls {
+  text-align: right;
 }
 
 .hits {
@@ -1605,7 +1557,6 @@ textarea {
 }
 
 .features {
-  width: 100%;
   margin-bottom: 40px;
   padding: 20px;
 
@@ -1632,21 +1583,23 @@ textarea {
   float: right;
 }
 .features__item {
+  position: relative;
+
   display: inline-block;
+  padding-top: 15px;
+  padding-left: 59px;
 
   vertical-align: top;
 
   background-color: yellow;
 }
-.features__item .icon {
-  float: left;
-
-  background-color: grey;
+.features__item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .features p {
-  padding-top: 15px;
-  padding-left: 59px;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -1656,7 +1609,7 @@ textarea {
 .blog {
   float: left;
   width: 49%;
-  height: 220px;
+  min-height: 220px;
   padding: 20px;
 
   background: #fff url('../img/blog/img/bg.jpg') no-repeat top right;
@@ -1684,7 +1637,6 @@ textarea {
 .subscribe {
   float: right;
   width: 49%;
-  height: 220px;
   padding: 5px;
 
   background: #efe4cc url('../img/subscribe/img/bg.jpg') no-repeat top left;
@@ -1698,8 +1650,7 @@ textarea {
   border-radius: 9px;
 }
 .subscribe__text {
-  width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 
   font-weight: 400;
   line-height: 22px;
@@ -1725,7 +1676,6 @@ textarea {
 }
 
 .google-map {
-  width: 100%;
   height: 430px;
 }
 
@@ -1891,9 +1841,6 @@ textarea {
   font-size: 0;
 
   background-color: blue;
-}
-.filters__row {
-  width: 100%;
 }
 .filters__row:not(:last-of-type) {
   margin-bottom: 16px;
