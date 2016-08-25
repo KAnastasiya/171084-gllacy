@@ -873,12 +873,16 @@ textarea {
   display: block;
 }
 .modal__dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
   width: 480px;
-  margin: 74px auto;
   padding: 24px;
 
   background-color: #f8f7f4;
   border-radius: 9px;
+  transform: translate(-50%, -50%);
 }
 .modal__header {
   margin-bottom: 20px;
