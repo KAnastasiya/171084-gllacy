@@ -18,5 +18,4 @@ webpack.config-uglify.js
 .gulp-scss-cache/
 .sass-cache/
 .csscomb.json
-preview/
 src/
