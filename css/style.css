@@ -627,6 +627,8 @@ body {
   line-height: 18px;
   font-family: 'Roboto', 'Arial', sans-serif;
   color: #fff;
+
+  background-color: #849d8f;
 }
 
 h1 {
@@ -635,8 +637,6 @@ h1 {
   font-weight: 700;
   font-size: 35px;
   line-height: 40px;
-
-  background-color: green;
 }
 
 h2 {
@@ -646,8 +646,6 @@ h2 {
   font-size: 24px;
   line-height: 30px;
   color: #323232;
-
-  background-color: blue;
 }
 
 img {
@@ -662,8 +660,6 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2.2%;
-
-  background-color: orange;
 }
 
 .icon {
@@ -684,10 +680,6 @@ img {
   top: -12px;
 
   margin-bottom: 28px;
-}
-
-.index-row {
-  background-color: purple;
 }
 
 .clearfix::before,
@@ -798,8 +790,6 @@ textarea {
   font-size: 14px;
   line-height: 16px;
   vertical-align: top;
-
-  background-color: blue;
 }
 .breadcrumbs__item:not(:last-of-type) {
   padding-right: 20px;
@@ -874,8 +864,6 @@ textarea {
   position: relative;
 
   margin: 0 auto;
-
-  background-color: yellow;
 }
 .product__content {
   position: relative;
@@ -894,8 +882,6 @@ textarea {
   text-align: center;
   text-decoration: underline;
   text-overflow: ellipsis;
-
-  background-color: blue;
 }
 .product__price {
   position: absolute;
@@ -905,8 +891,6 @@ textarea {
   font-weight: 700;
   line-height: 45px;
   text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
-
-  background-color: orange;
 }
 .product__price span:first-of-type {
   position: relative;
@@ -958,15 +942,11 @@ textarea {
 
 .page-header {
   min-height: 74px;
-
-  background-color: yellow;
 }
 
 .logo {
   float: left;
   margin: 10px 10px 0 0;
-
-  background-color: red;
 }
 .logo__link {
   display: block;
@@ -981,8 +961,6 @@ textarea {
 .page-navigation {
   float: left;
   width: 48%;
-
-  background-color: purple;
 }
 .page-navigation__list {
   list-style-type: none;
@@ -992,8 +970,6 @@ textarea {
   display: inline-block;
 
   vertical-align: top;
-
-  background-color: blue;
 }
 .page-navigation__link {
   display: block;
@@ -1053,8 +1029,6 @@ textarea {
   position: relative;
 
   padding: 0 10px;
-
-  background-color: lightgreen;
 }
 .page-navigation .dropdown__item:first-of-type {
   margin-bottom: 4px;
@@ -1098,8 +1072,6 @@ textarea {
   float: right;
 
   font-size: 0;
-
-  background-color: blue;
 }
 .user__controls-item {
   position: relative;
@@ -1174,8 +1146,6 @@ textarea {
 
   width: 14px;
   height: 10px;
-
-  background-color: red;
 }
 .user__btn--basket:hover + .basket {
   display: block;
@@ -1190,15 +1160,11 @@ textarea {
 }
 .login__controls {
   margin-top: 20px;
-
-  background-color: green;
 }
 .login__links {
   float: right;
 
   text-align: left;
-
-  background-color: yellow;
 }
 .login__links a {
   display: block;
@@ -1223,8 +1189,6 @@ textarea {
 }
 .basket__body td {
   padding-bottom: 20px;
-
-  background-color: green;
 }
 .basket__body td:not(:last-of-type) {
   padding-right: 24px;
@@ -1237,8 +1201,6 @@ textarea {
   font-size: 15px;
   line-height: 18px;
   color: #333;
-
-  background-color: lightblue;
 }
 .basket__footer td {
   line-height: 46px;
@@ -1248,8 +1210,6 @@ textarea {
 }
 .basket__controls {
   text-align: right;
-
-  background-color: lightgreen;
 }
 .basket__price,
 .basket__total-price {
@@ -1268,8 +1228,6 @@ textarea {
 
   font-weight: 700;
   text-align: right;
-
-  background-color: purple;
 }
 .phone__text {
   margin-bottom: 8px;
@@ -1303,8 +1261,6 @@ textarea {
   width: 32%;
 
   vertical-align: middle;
-
-  background-color: purple;
 }
 .social__list {
   list-style-type: none;
@@ -1321,8 +1277,6 @@ textarea {
   font-size: 0;
   line-height: 1;
   vertical-align: top;
-
-  background-color: green;
 }
 .social__item:not(:last-of-type) {
   margin-right: 16px;
@@ -1348,13 +1302,9 @@ textarea {
   width: 45%;
 
   vertical-align: middle;
-
-  background-color: blue;
 }
 .footer-links__col {
   float: left;
-
-  background-color: lightgrey;
 }
 .footer-links__col:first-of-type {
   margin-right: 32px;
@@ -1389,8 +1339,6 @@ textarea {
   line-height: 18px;
   vertical-align: middle;
   color: #fefefe;
-
-  background-color: green;
 }
 .copyright__link {
   font-size: 12px;
@@ -1399,8 +1347,6 @@ textarea {
 /* -------------- Index ------------- */
 .slider {
   position: relative;
-
-  background-color: green;
 }
 .slider__list {
   position: relative;
@@ -1409,8 +1355,6 @@ textarea {
   height: 585px;
   margin: 0 auto;
   overflow: hidden;
-
-  background-color: yellow;
 }
 .slider__item {
   position: absolute;
@@ -1450,8 +1394,6 @@ textarea {
 
   font-size: 0;
   line-height: 1;
-
-  background-color: red;
 }
 .slider__controls label {
   display: inline-block;
@@ -1495,8 +1437,6 @@ textarea {
 
 .banners {
   margin-bottom: 28px;
-
-  background-color: blue;
 }
 
 .banner {
@@ -1563,9 +1503,6 @@ textarea {
   background: #efe3cd url('../img/features/img/bg-pattern.jpg') repeat top left;
   border-radius: 16px;
 }
-.features__row {
-  background-color: purple;
-}
 .features__row:not(:last-of-type) {
   margin-bottom: 10px;
 }
@@ -1590,8 +1527,6 @@ textarea {
   padding-left: 59px;
 
   vertical-align: top;
-
-  background-color: yellow;
 }
 .features__item::before {
   content: '';
@@ -1620,8 +1555,6 @@ textarea {
 
   line-height: 28px;
   color: #323232;
-
-  background-color: blue;
 }
 .blog__link {
   display: block;
@@ -1630,13 +1563,12 @@ textarea {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-
-  background-color: lightgreen;
 }
 
 .subscribe {
   float: right;
   width: 49%;
+  min-height: 220px;
   padding: 5px;
 
   background: #efe4cc url('../img/subscribe/img/bg.jpg') no-repeat top left;
@@ -1644,22 +1576,18 @@ textarea {
 }
 .subscribe__content {
   height: 100%;
-  padding: 30px 20px;
+  min-height: 210px;
+  padding: 35px 20px;
 
   background-color: #f8f7f4;
   border-radius: 9px;
 }
 .subscribe__text {
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 
   font-weight: 400;
   line-height: 22px;
   color: #5a5a5a;
-
-  background-color: yellow;
-}
-.subscribe__form {
-  background-color: red;
 }
 .subscribe__form input {
   width: 62%;
@@ -1698,9 +1626,6 @@ textarea {
   background-color: rgba(255, 255, 255, 0.98);
   border-radius: 16px;
 }
-.contacts__info {
-  background-color: red;
-}
 .contacts__info:not(:last-of-type) {
   margin-bottom: 20px;
 }
@@ -1710,8 +1635,6 @@ textarea {
   font-size: 14px;
   line-height: 20px;
   color: #323232;
-
-  background-color: green;
 }
 .contacts__value {
   font-weight: 700;
@@ -1734,8 +1657,6 @@ textarea {
 
   margin-bottom: 20px;
   padding-top: 12px;
-
-  background-color: green;
 }
 .feedback-form__item label {
   position: absolute;
@@ -1766,15 +1687,11 @@ textarea {
   margin-left: -10px;
 
   font-size: 0;
-
-  background-color: blue;
 }
 .products__list {
   margin-bottom: 56px;
 
   font-size: 0;
-
-  background-color: green;
 }
 
 .pagination {
@@ -1784,8 +1701,6 @@ textarea {
 
   line-height: 1;
   text-align: right;
-
-  background-color: red;
 }
 .pagination__list {
   display: inline-block;
@@ -1822,8 +1737,6 @@ textarea {
 
   width: 26px;
   height: 26px;
-
-  background-color: purple;
 }
 .pagination .icon.disabled {
   opacity: 0.2;
@@ -1839,8 +1752,6 @@ textarea {
   margin-bottom: 30px;
 
   font-size: 0;
-
-  background-color: blue;
 }
 .filters__row:not(:last-of-type) {
   margin-bottom: 16px;
@@ -1888,7 +1799,6 @@ textarea {
   line-height: 20px;
   vertical-align: top;
 
-  background-color: lightgreen;
   cursor: pointer;
 }
 .filters input[type='checkbox'] + label::before,
@@ -2051,12 +1961,14 @@ textarea {
 
   background: rgba(255, 255, 255, 0.2);
   border: 2px solid #fff;
+  box-shadow: none;
 }
 .btn--filters-apply:hover,
 .btn--filters-apply:focus {
   color: #323232;
 
   background: #fff;
+  box-shadow: none;
 }
 .btn--filters-apply:active {
   background-color: #ededed;
