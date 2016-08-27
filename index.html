@@ -294,7 +294,7 @@
                 <p class="contacts__tips">(с 10 до 20 ежедневно)</p>
               </div>
               <div class="contacts__controls">
-                <a class="btn btn--feedback-show" href="#">Форма обратной связи</a>
+                <button class="btn btn--feedback-show">Форма обратной связи</button>
               </div>
             </div>
           </div>
@@ -337,27 +337,29 @@
       </div>
     </footer>
     <div class="modal" id="feedback">
-      <div class="modal__dialog">
-        <div class="modal__header clearfix">
-          <h2>Мы обязательно вам ответим!</h2>
-          <button class="icon icon--close" type="button"></button>
-        </div>
-        <div class="modal__body">
-          <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post"></form>
-          <div class="feedback-form__item">
-            <input type="text" name="user" id="user">
-            <label for="user">Как вас зовут?</label>
+      <div class="modal__container">
+        <div class="modal__dialog">
+          <div class="modal__header clearfix">
+            <h2>Мы обязательно вам ответим!</h2>
+            <button class="icon icon--close" type="button"></button>
           </div>
-          <div class="feedback-form__item">
-            <input type="email" name="email" id="email">
-            <label for="email">Ваша почта для ответа?</label>
-          </div>
-          <div class="feedback-form__item">
-            <textarea name="message" id="message"></textarea>
-            <label for="message">Напишите что-нибудь...</label>
-          </div>
-          <div class="feedback-form__controls">
-            <button class="btn btn--feedback" type="submit">Отправить</button>
+          <div class="modal__body">
+            <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post"></form>
+            <div class="feedback-form__item">
+              <input type="text" name="user" id="user">
+              <label for="user">Как вас зовут?</label>
+            </div>
+            <div class="feedback-form__item">
+              <input type="email" name="email" id="email">
+              <label for="email">Ваша почта для ответа?</label>
+            </div>
+            <div class="feedback-form__item">
+              <textarea name="message" id="message"></textarea>
+              <label for="message">Напишите что-нибудь...</label>
+            </div>
+            <div class="feedback-form__controls">
+              <button class="btn btn--feedback" type="submit">Отправить</button>
+            </div>
           </div>
         </div>
       </div>

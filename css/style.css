@@ -520,7 +520,85 @@ textarea {
   background-position: -628px 0;
 }
 
-/* -------------- Additional ------------ */
+/* -------------- Animation ------------ */
+.animated {
+  animation-duration: 1000ms;
+
+  animation-fill-mode: both;
+}
+
+/* --------------------------------------- */
+@keyframes bounceInRight {
+  from,
+  70%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    transform: translate(3000px, -50%);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(-70%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+.bounceInRight {
+  animation-name: bounceInRight;
+}
+
+/* --------------------------------------- */
+@keyframes bounceOutRight {
+  from,
+  70%,
+  to {
+    animation-timing-function: ease-in;
+  }
+  from {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(900px, -50%);
+    opacity: 0.8;
+  }
+  to {
+    transform: translate(3000px, -50%);
+    opacity: 0;
+  }
+}
+.bounceOutRight {
+  animation-name: bounceOutRight;
+}
+
+/* --------------------------------------- */
+@keyframes shake {
+  from,
+  to {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-5px);
+  }
+}
+.shake {
+  animation-name: shake;
+}
+
+/* ----------- Common styles ------------ */
 .page-navigation,
 .user {
   margin-top: 21px;
@@ -587,11 +665,11 @@ textarea {
   border: none;
 }
 
-.feedback-form__item input.filled + label,
-.feedback-form__item textarea.filled + label,
-.feedback-form__item input:focus + label,
-.feedback-form__item textarea:focus + label {
-  top: 0;
+input.filled + label,
+textarea.filled + label,
+input:focus + label,
+textarea:focus + label {
+  top: -2px;
 
   font-weight: 400;
   font-size: 11px;
@@ -607,7 +685,6 @@ textarea {
   border-radius: 16px;
 }
 
-/* ----------- Common styles ------------ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -763,6 +840,14 @@ input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #999;
 }
+input.error,
+textarea.error {
+  border-color: red;
+}
+input:focus + label,
+textarea:focus + label {
+  color: #5b9ddf;
+}
 
 input {
   height: 44px;
@@ -773,6 +858,17 @@ textarea {
   min-height: 155px;
 
   resize: none;
+}
+
+label {
+  position: absolute;
+  top: 22px;
+  left: 15px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999;
 }
 
 .breadcrumbs {
@@ -819,7 +915,7 @@ textarea {
 .modal--active {
   display: block;
 }
-.modal__dialog {
+.modal__container {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -829,7 +925,6 @@ textarea {
 
   background-color: #f8f7f4;
   border-radius: 9px;
-  transform: translate(-50%, -50%);
 }
 .modal__header {
   margin-bottom: 20px;
@@ -1396,6 +1491,8 @@ textarea {
   line-height: 1;
 }
 .slider__controls label {
+  position: static;
+
   display: inline-block;
   width: 21px;
   height: 21px;
@@ -1658,22 +1755,8 @@ textarea {
   margin-bottom: 20px;
   padding-top: 12px;
 }
-.feedback-form__item label {
-  position: absolute;
-  top: 22px;
-  left: 15px;
-
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #999;
-}
 .feedback-form__item input {
   width: 270px;
-}
-.feedback-form__item input:focus + label,
-.feedback-form__item textarea:focus + label {
-  color: #5b9ddf;
 }
 .feedback-form__controls {
   margin-top: 20px;
@@ -1784,14 +1867,19 @@ textarea {
 .filters__group-item:not(:last-of-type) {
   margin-right: 20px;
 }
+.filters label {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  color: #fff;
+}
 .filters input[type='checkbox'],
 .filters input[type='radio'] {
   display: none;
 }
 .filters input[type='checkbox'] + label,
 .filters input[type='radio'] + label {
-  position: relative;
-
   display: inline-block;
   padding-left: 30px;
 
