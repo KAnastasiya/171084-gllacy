@@ -19,3 +19,4 @@ webpack.config-uglify.js
 .sass-cache/
 .csscomb.json
 src/
+preview/
