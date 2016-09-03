@@ -10,10 +10,11 @@
   <body>
     <div class="page-wrapper">
       <header class="page-header">
-        <div class="container clearfix">
+        <div class="container">
           <div class="logo">
             <a class="logo__link" href="index.html">
               <img class="logo__image" src="img/logo/img/logo.svg" alt="Logo" width="153" height="63">
+              <span class="logo__text">Глейси</span>
             </a>
           </div>
           <nav class="page-navigation">
@@ -46,33 +47,46 @@
               </li>
             </ul>
           </nav>
-          <div class="user">
-            <div class="user__controls">
-              <div class="user__item user__item--search">
-                <button class="user__btn" type="button"></button>
+          <nav class="user">
+            <ul class="user__controls">
+              <li class="user__item user__item--search">
+                <button class="user__btn" type="button">
+                  <span class="user__btn-text">Найти</span>
+                </button>
                 <div class="search">
                   <form class="search__form" action="https://echo.htmlacademy.ru" method="post">
-                    <input type="search" placeholder="Что ищем?">
+                    <input type="search" placeholder="Что ищем?" id="search">
+                    <label for="search">Что ищем?</label>
                   </form>
                 </div>
-              </div>
-              <div class="user__item user__item--login">
+              </li>
+              <li class="user__item user__item--login">
                 <button class="user__btn" type="button">Вход</button>
                 <div class="login">
                   <form class="login__form" action="https://echo.htmlacademy.ru" method="post">
-                    <input type="email" placeholder="Электронная почта" name="login">
-                    <input type="password" placeholder="Пароль" name="password">
-                    <div class="login__controls clearfix">
+                    <div class="form__field">
+                      <input type="email" placeholder="Электронная почта" name="login" id="name">
+                      <label for="name">Электронная почта</label>
+                    </div>
+                    <div class="form__field">
+                      <input type="password" placeholder="Пароль" name="password" id="password">
+                      <label for="password">Пароль</label>
+                    </div>
+                    <div class="login__controls">
                       <button class="btn btn--login" type="submit">Войти</button>
                       <div class="login__links">
-                        <a class="login__forgot-password" href="#"><span>Забыли пароль?</span></a>
-                        <a class="login__signup" href="#"><span>Новая регистрация</span></a>
+                        <a class="login__forgot-password" href="#">
+                          <span>Забыли пароль?</span>
+                        </a>
+                        <a class="login__signup" href="#">
+                          <span>Новая регистрация</span>
+                        </a>
                       </div>
                     </div>
                   </form>
                 </div>
-              </div>
-              <div class="filled user__item user__item--basket">
+              </li>
+              <li class="filled user__item user__item--basket">
                 <button class="user__btn" type="button">2 товара</button>
                 <div class="basket">
                   <table>
@@ -84,10 +98,12 @@
                     <tbody class="basket__body">
                       <tr>
                         <td>
-                          <button class="icon icon--remove" type="button"></button>
+                          <button class="icon icon--remove" type="button">
+                            <span class="icon__text">Удалить</span>
+                          </button>
                         </td>
                         <td class="basket__image">
-                          <img src="img/basket/img/ice1.png" alt="citrus ice cream" width="33" height="33">
+                          <img src="img/basket/img/ice1.png" alt="ice1 ice cream" width="33" height="33">
                         </td>
                         <td class="basket__name">Пломбир с апельсиновым джемом</td>
                         <td class="basket__price">1,5 кг х<span> 200 руб.</span></td>
@@ -95,10 +111,12 @@
                       </tr>
                       <tr>
                         <td>
-                          <button class="icon icon--remove" type="button"></button>
+                          <button class="icon icon--remove" type="button">
+                            <span class="icon__text">Удалить</span>
+                          </button>
                         </td>
                         <td class="basket__image">
-                          <img src="img/basket/img/ice2.png" alt="strawberry ice cream" width="33" height="33">
+                          <img src="img/basket/img/ice2.png" alt="ice2 ice cream" width="33" height="33">
                         </td>
                         <td class="basket__name">Клубничный пломбир с присыпкой из белого шоколада</td>
                         <td class="basket__price">1,5 кг х<span> 300 руб.</span></td>
@@ -110,16 +128,16 @@
                     <button class="btn btn--order" type="button">Оформить заказ</button>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
+              </li>
+            </ul>
+          </nav>
           <div class="phone">
             <p class="phone__text">С 10 до 20, ежедневно</p>
             <p class="phone__number">8 812 450-25-25</p>
           </div>
         </div>
       </header>
-      <main class="container clearfix">
+      <main class="container">
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="index.html">Главная</a>
@@ -132,7 +150,7 @@
         <h1>Сливочное мороженое</h1>
         <div class="filters">
           <form class="filters__form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="filters__row clearfix">
+            <div class="filters__row">
               <fieldset class="filters__group">
                 <legend class="filters__group-title">Сортировка:</legend>
                 <div class="select">
@@ -177,7 +195,7 @@
                 </div>
               </fieldset>
             </div>
-            <div class="filters__row clearfix">
+            <div class="filters__row">
               <fieldset class="filters__group">
                 <legend class="filters__group-title">Наполнители:</legend>
                 <div class="filters__group-container">
@@ -208,7 +226,8 @@
           </form>
         </div>
         <section class="products">
-          <div class="products__list clearfix">
+          <h2 class="products__title">Наши продукты</h2>
+          <div class="products__list">
             <figure class="product">
               <div class="product__container">
                 <div class="product__content">
@@ -415,7 +434,9 @@
             </figure>
           </div>
           <div class="pagination">
-            <button class="icon icon--prev disabled" type="button"></button>
+            <button class="icon icon--prev disabled" type="button">
+              <span class="icon__text">Предыдущая страница</span>
+            </button>
             <ul class="pagination__list">
               <li class="pagination__item--active pagination__item">1</li>
               <li class="pagination__item">2</li>
@@ -423,40 +444,64 @@
               <li class="pagination__item">4</li>
               <li class="pagination__item">5</li>
             </ul>
-            <button class="icon icon--next" type="button"></button>
+            <button class="icon icon--next" type="button">
+              <span class="icon__text">Следующая страница</span>
+            </button>
           </div>
         </section>
       </main>
       <footer class="page-footer">
-        <div class="container clearfix">
+        <div class="container">
           <section class="social">
+            <h2 class="social__title">Добавляйтесь к нам в социальных сетях</h2>
             <ul class="social__list">
-              <li class="social__item social__item--tw">
-                <a class="icon" href="#"></a>
+              <li class="social__item--tw social__item">
+                <a class="icon" href="#">
+                  <span class="icon__text">Твиттер</span>
+                </a>
               </li>
-              <li class="social__item social__item--insta">
-                <a class="icon" href="#"></a>
+              <li class="social__item--insta social__item">
+                <a class="icon" href="#">
+                  <span class="icon__text">Инстаграмм</span>
+                </a>
               </li>
-              <li class="social__item social__item--fb">
-                <a class="icon" href="#"></a>
+              <li class="social__item--fb social__item">
+                <a class="icon" href="#">
+                  <span class="icon__text">Фейсбук</span>
+                </a>
               </li>
-              <li class="social__item social__item--vk">
-                <a class="icon" href="#"></a>
+              <li class="social__item--vk social__item">
+                <a class="icon" href="#">
+                  <span class="icon__text">Вконтакте</span>
+                </a>
               </li>
             </ul>
           </section>
-          <section class="footer-links clearfix">
+          <section class="footer-links">
+            <h2 class="footer-links__title">Полезные ссылки</h2>
             <div class="footer-links__col">
-              <a class="footer-links__item footer-links__item--providers" href="#"><span>Для поставщиков</span></a>
-              <a class="footer-links__item" href="#"><span>О производстве</span></a>
+              <a class="footer-links__item footer-links__item--providers" href="#">
+                <span>Для поставщиков</span>
+              </a>
+              <a class="footer-links__item" href="#">
+                <span>О производстве</span>
+              </a>
             </div>
             <div class="footer-links__col">
-              <a class="footer-links__item" href="#"><span>Наши документы</span></a>
-              <a class="footer-links__item" href="#"><span>Экологические стандарты</span></a>
+              <a class="footer-links__item" href="#">
+                <span>Наши документы</span>
+              </a>
+              <a class="footer-links__item" href="#">
+                <span>Экологические стандарты</span>
+              </a>
             </div>
           </section>
           <section class="copyright">
-            <img src="img/copyright/img/htmlAcademy.svg" alt="htmlAcademy" width="108" height="36">
+            <h2 class="copyright__title">Разработчик сайта</h2>
+            <div class="copyright__logo">
+              <img src="img/copyright/img/htmlAcademy.svg" alt="htmlAcademy" width="108" height="36">
+              <span class="copyright__logo-text">HtmlAcademy</span>
+            </div>
             <div class="copyright__text">Cделано в <a class="copyright__link" href="https://htmlacademy.ru"><span>HTML Academy</span></a> &copy; 2016</div>
           </section>
         </div>
