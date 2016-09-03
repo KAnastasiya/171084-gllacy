@@ -851,6 +851,14 @@ h2 {
   color: #323232;
 }
 
+h3 {
+  margin-bottom: 16px;
+
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 1;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -1197,13 +1205,16 @@ label {
 .user__btn {
   position: relative;
 
+  display: inline-block;
   min-width: 32px;
   height: 32px;
 
   font-weight: 500;
   font-size: 14px;
+  line-height: 32px;
   vertical-align: top;
   color: #fff;
+  text-decoration: none;
 
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
@@ -1743,13 +1754,6 @@ label {
 
   background: #3e251c url('../img/banners/img/bg-chocolate.jpg') no-repeat top left;
   background-size: cover;
-}
-.banner__title {
-  margin-bottom: 16px;
-
-  font-weight: 700;
-  font-size: 35px;
-  line-height: 1;
 }
 .banner__text {
   margin-bottom: 45px;

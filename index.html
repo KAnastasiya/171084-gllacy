@@ -52,9 +52,9 @@
           <nav class="user">
             <ul class="user__controls">
               <li class="user__item user__item--search">
-                <button class="user__btn" type="button">
+                <a class="user__btn" href="search.html" target="_blank">
                   <span class="user__btn-text">Найти</span>
-                </button>
+                </a>
                 <div class="search">
                   <form class="search__form" action="https://echo.htmlacademy.ru" method="post">
                     <input type="search" placeholder="Что ищем?" id="search">
@@ -63,7 +63,7 @@
                 </div>
               </li>
               <li class="user__item user__item--login">
-                <button class="user__btn" type="button">Вход</button>
+                <a class="user__btn" href="login.html" target="_blank">Вход</a>
                 <div class="login">
                   <form class="login__form" action="https://echo.htmlacademy.ru" method="post">
                     <div class="form__field">
@@ -89,7 +89,7 @@
                 </div>
               </li>
               <li class="user__item user__item--basket">
-                <button class="user__btn" type="button">Пусто</button>
+                <a class="user__btn" href="basket.html" target="_blank">Пусто</a>
                 <div class="basket">
                   <table>
                     <tfoot class="basket__footer">
@@ -166,14 +166,14 @@
           <section class="banners">
             <h2 class="banners__title">Баннеры</h2>
               <section class="banner">
-                <p class="banner__title">Малинка даром!</p>
+                <h3>Малинка даром!</h3>
                 <p class="banner__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
                 <div class="banner__controls">
                   <a class="btn btn--banner" href="#">Хочу варенье!</a>
                 </div>
               </section>
               <section class="banner">
-                <p class="banner__title">Шоколадки даром!</p>
+                <h3>Шоколадки даром!</h3>
                 <p class="banner__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
                 <div class="banner__controls">
                   <a class="btn btn--banner" href="#">Хочу шоколадки!</a>
@@ -289,8 +289,8 @@
                 <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
                 <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
                   <div class="form__field">
-                    <input type="email" placeholder="Электронная почта" name="email" id="email">
-                    <label for="email">Электронная почта</label>
+                    <input type="email" placeholder="Электронная почта" name="email" id="subscribeEmail">
+                    <label for="subscribeEmail">Электронная почта</label>
                   </div>
                   <button class="btn btn--subscribe" type="submit">Отправить</button>
                 </form>
@@ -300,7 +300,7 @@
         </div>
         <section class="map">
           <h2 class="map__title">Где мы находимся</h2>
-          <img class="map__image" src="../img/map/img/map.png" alt="Карта" width="1250px" height="430">
+          <img class="map__image" src="../img/map/img/map.png" alt="Карта" width="1250" height="430">
           <section class="contacts">
             <h2 class="contacts__title">Наши контакты</h2>
             <div class="container">
