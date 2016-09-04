@@ -996,7 +996,6 @@ label {
 }
 
 .page-header {
-  width: 100%;
   min-height: 74px;
 }
 
@@ -1388,12 +1387,13 @@ label {
 }
 .social__item:hover,
 .social__item:focus {
-  border: 4px solid rgba(255, 255, 255, 0.7);
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
 .social__item:active {
-  border: 4px solid rgba(255, 255, 255, 0.99);
-  box-shadow: inset 0 2px 1px #888;
+  border: 3px solid rgba(255, 255, 255, 0.99);
+  box-shadow: inset 0 2px 1px #888, 0 0 2px rgba(255, 255, 255, 0.99);
   opacity: 0.7;
 }
 
@@ -1484,14 +1484,10 @@ label {
 .hits {
   margin: -10px;
   margin-bottom: 30px;
-
-  font-size: 0;
 }
 .products__list,
 .hits__list {
   margin-bottom: 73px;
-
-  font-size: 0;
 }
 
 .product {
@@ -1835,8 +1831,6 @@ label {
   font-size: 24px;
   line-height: 30px;
   color: #323232;
-
-  background-color: rgba(255, 255, 255, 0.8);
 }
 .blog__link:hover,
 .blog__link:active {
