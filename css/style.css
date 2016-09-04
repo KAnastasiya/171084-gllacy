@@ -1886,6 +1886,8 @@ label {
 
 .google-map {
   min-height: 430px;
+
+  background: url('../img/map/img/map.png') no-repeat center;
 }
 
 .contacts {
