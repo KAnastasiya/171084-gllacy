@@ -1,0 +1,20 @@
+div.modal#feedback
+  div.modal__container
+    div.modal__dialog
+      div.modal__header
+        h2 Мы обязательно вам ответим!
+        button(type='button').icon.icon--close
+          span.icon__text Закрыть
+      div.modal__body
+        form(action='https://echo.htmlacademy.ru', method='post').feedback-form
+          div.form__field
+            input(type='text', name='user', id='user')
+            label(for='user') Как вас зовут?
+          div.form__field
+            input(type='email', name='email', id='email')
+            label(for='email') Ваша почта для ответа?
+          div.form__field
+            textarea(name='message', id='message')
+            label(for='message') Напишите что-нибудь...
+          div.feedback-form__controls
+            button(type='submit').btn.btn--feedback Отправить

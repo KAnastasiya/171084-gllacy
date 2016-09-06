@@ -1,0 +1,15 @@
+div.login
+  form(action='https://echo.htmlacademy.ru', method='post').login__form
+    div.form__field
+      input(type='email', placeholder='Электронная почта', name='login', id='name')
+      label(for='name') Электронная почта
+    div.form__field
+      input(type='password', placeholder='Пароль', name='password', id='password')
+      label(for='password') Пароль
+    div.login__controls
+      button(type='submit').btn.btn--login Войти
+      div.login__links
+        a(href='forgot-password.html').login__forgot-password
+          span Забыли пароль?
+        a(href='sign-up.html').login__signup
+          span Новая регистрация

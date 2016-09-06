@@ -1,0 +1,108 @@
+%header-vertical-align {
+  @include vertical-align($page-header-height, $page-header-icon-height);
+}
+
+%header-dropdown-element-position {
+  position: absolute;
+  top: 100%;
+  z-index: 3;
+
+  display: none;
+}
+
+%header-windows {
+  padding: $padding-base;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  input {
+    width: 100%;
+  }
+}
+
+%header-windows-position {
+  @extend %header-dropdown-element-position;
+
+  right: 0;
+}
+
+%link--dark {
+  @include link('dark');
+}
+
+%link--light {
+  @include link('light');
+}
+
+%btn-icon {
+  background-color: transparent;
+  border: none;
+}
+
+%input-label-small {
+  top: -2px;
+
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+%filter-input-container {
+  padding: 8px 16px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: $border-radius-base;
+}
+
+%basket-red {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 20px;
+  z-index: 1;
+
+  width: 14px;
+  height: 10px;
+
+  background-color: #e84d37;
+}
+
+%filter-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+}
+
+%index-row {
+  @extend %clearfix;
+
+  margin-bottom: 40px;
+}
+
+%clearfix {
+  &::before,
+  &::after {
+    content: ' ';
+
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+%sr-only {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0,0,0,0);
+}

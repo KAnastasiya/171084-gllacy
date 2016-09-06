@@ -1,0 +1,43 @@
+extends blocks/layout
+block content
+  include blocks/products/product
+  div.page-wrapper
+    - var currentUrl = '/catalog';
+    include blocks/page-header/page-header
+
+    main.container
+      ul.breadcrumbs
+        li.breadcrumbs__item
+          a(href='index.html').breadcrumbs__link Главная
+        li.breadcrumbs__item
+          a(href='catalog.html').breadcrumbs__link Каталог
+        li.breadcrumbs__item Сливочное
+
+      h1 Сливочное мороженое
+
+      include blocks/filters/filters
+
+      section.products
+        h2.products__title Наши продукты
+        div.products__list
+          +product('citrus','Сливочное с апельсиновым джемом и цитрусовой стружкой', '310')
+          +product('coffee','Сливочно-кофейное с кусочками шоколада', '380')
+          +product('strawberry','Сливочно-клубничное с присыпкой из белого шоколада', '355')
+          +product('creme-brulee','Сливочное крем-брюле с карамельной подливкой', '415')
+          +product('cowberry','Сливочное с брусничным джемом', '325')
+          +product('blackberry','Сливочно-черничное с цельными ягодами черники', '410')
+          +product('lemon','Сливочно-лимонное с карамельной присыпкой', '375')
+          +product('dark-chocolate','Сливочное с шоколадной стружкой', '320')
+          +product('vanilla','Сливочно-ванильное с кусочками шоколада', '440')
+          +product('menthol','Сливочноe с ментоловым сиропом', '435')
+          +product('creamy','Сливочное с кусочками черного шоколада', '355')
+          +product('mint','Сливочное с мятным сиропом', '420')
+
+        include blocks/pagination/pagination
+
+    include blocks/page-footer/page-footer
+
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+  script(src='https://code.jquery.com/ui/1.12.0/jquery-ui.js')
+  script(src='js/common.min.js')
+  script(src='js/catalog.min.js')

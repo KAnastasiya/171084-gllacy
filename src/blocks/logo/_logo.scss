@@ -1,0 +1,16 @@
+.logo {
+  float: left;
+  margin: $logo-icon-margin-top $logo-icon-margin-top 0 0;
+  &__link {
+    display: block;
+    width: auto;
+    max-width: 153px;
+    height: $logo-icon-height;
+  }
+  &__image {
+    display: block;
+  }
+  &__text {
+    @extend %sr-only;
+  }
+}

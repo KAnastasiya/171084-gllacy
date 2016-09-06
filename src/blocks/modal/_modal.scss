@@ -1,0 +1,41 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+
+  display: none;
+
+  background: rgba(0, 0, 0 , 0.3);
+  &--active {
+    display: block;
+  }
+  &__container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    width: 480px;
+    padding: 24px;
+
+    background-color: #f8f7f4;
+    border-radius: 9px;
+  }
+  &__header {
+    @extend %clearfix;
+
+    margin-bottom: $padding-base;
+    h2 {
+      float: left;
+    }
+    .icon--close {
+      @extend %btn-icon;
+
+      float: right;
+
+      cursor: pointer;
+    }
+  }
+}

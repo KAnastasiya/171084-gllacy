@@ -1,0 +1,60 @@
+.basket {
+  @extend %header-windows;
+  @extend %header-windows-position;
+
+  width: 540px;
+  padding: 20px;
+  table {
+    border-collapse: collapse;
+  }
+  &__body {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #323232;
+    td {
+      padding-bottom: $padding-base;
+
+      vertical-align: middle;
+      &:not(:last-of-type) {
+        padding-right: $basket-padding-right;
+      }
+    }
+    span {
+      color: #999;
+    }
+  }
+  &__image {
+    width: $basket-padding-right + $basket-img-size;
+
+    line-height: 1;
+    img {
+      border-radius: 50%;
+    }
+  }
+  &__footer {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: #333;
+    td {
+      line-height: 46px;
+      text-align: right;
+
+      border-top: 1px solid #cacac7;
+    }
+  }
+  &__controls {
+    text-align: right;
+  }
+  &__price,
+  &__total-price {
+    white-space: nowrap;
+  }
+}
+
+.icon--remove {
+  @extend %btn-icon;
+
+  cursor: pointer;
+}

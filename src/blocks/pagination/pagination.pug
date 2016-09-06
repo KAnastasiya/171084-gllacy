@@ -1,0 +1,9 @@
+div.pagination
+  a(href='#').icon.icon--prev.disabled
+    span.icon__text Предыдущая страница
+  ul.pagination__list
+    - var n = 1
+    while n < 6
+      li(class={'pagination__item--active': n === 1}).pagination__item= n++
+  a(href='#').icon.icon--next
+    span.icon__text Следующая страница

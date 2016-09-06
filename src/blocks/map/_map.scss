@@ -1,0 +1,17 @@
+.map {
+  position: relative;
+
+  background-color: #eee;
+  &__title {
+    @extend %sr-only;
+  }
+  &__image {
+    display: none;
+  }
+}
+
+.google-map {
+  min-height: 430px;
+
+  background: url('../img/map/img/map.png') no-repeat center;
+}

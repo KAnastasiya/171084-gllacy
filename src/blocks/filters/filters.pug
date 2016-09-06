@@ -1,0 +1,81 @@
+div.filters
+  form(action='https://echo.htmlacademy.ru', method='get').filters__form
+    div.filters__row
+      fieldset.filters__group
+        legend.filters__group-title Сортировка:
+        div.select
+          select(name='sort')
+            each val in ['popular', 'cheap', 'expensive', 'fat']
+              case val
+                when 'popular'
+                  - var text = 'по популярности'
+                when 'cheap'
+                  - var text = 'сначала недорогие'
+                when 'expensive'
+                  - var text = 'сначала дорогие'
+                when 'fat'
+                  - var text = 'по жирности'
+                default
+                  - var text = 'неизвесный способ сортировки'
+              option(value=val)= text
+          span.select__icon
+
+      fieldset.filters__group.slider-range
+        div.slider-range__title
+          label(for='amount').filters__group-title Цена:
+            != ''
+          input(type='text', id='amount', readonly).slider-range__value
+        div.slider-range__body
+          div#slider-range
+
+      fieldset.filters__group
+        legend.filters__group-title Жирность:
+        div.filters__group-container
+          each val in [0, 10, 30, 'max']
+            div.filters__group-item
+              if val === 10
+                input(type='radio', name='fat', id='fat-' + val, checked=true)
+                label(for='fat-' + val)= 'до ' + val + '%'
+              else
+                input(type='radio', name='fat', id='fat-' + val, checked=false)
+                if val === 'max'
+                  label(for='fat-' + val)= 'выше 30%'
+                else if val === 0
+                  label(for='fat-' + val)= val + '%'
+                else
+                  label(for='fat-' + val)= 'до ' + val + '%'
+
+    div.filters__row
+      fieldset.filters__group
+        legend.filters__group-title Наполнители:
+        div.filters__group-container
+          each val in ['choco', 'sugar', 'fruits', 'syrup', 'jam']
+            case val
+                when 'choco'
+                  - var text = 'шоколадные'
+                  - var check = true
+                  - var dis = false
+                when 'sugar'
+                  - var text = 'сахарные присыпки'
+                  - var check = true
+                  - var dis = true
+                when 'fruits'
+                  - var text = 'фрукты'
+                  - var check = false
+                  - var dis = false
+                when 'syrup'
+                  - var text = 'сиропы'
+                  - var check = false
+                  - var dis = false
+                when 'jam'
+                  - var text = 'джемы'
+                  - var check = false
+                  - var dis = false
+                default
+                  - var text = 'неизвесный наполнитель'
+                  - var check = false
+                  - var dis = false
+            div.filters__group-item
+              input(type='checkbox', name='fillers-' + val, id='fillers-' + val, checked=check, disabled=dis)
+              label(for='fillers-' + val)= text
+      button(type='submit').btn.btn--filters-apply Применить

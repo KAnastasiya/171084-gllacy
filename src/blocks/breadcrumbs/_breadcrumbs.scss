@@ -1,0 +1,33 @@
+.breadcrumbs {
+  margin: 16px 0 6px;
+
+  list-style-type: none;
+  font-size: 0;
+  &__item {
+    position: relative;
+
+    display: inline-block;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    vertical-align: top;
+    &:not(:last-of-type) {
+      padding-right: 20px;
+      &::after {
+        content: '>>';
+        position: absolute;
+        top: 0;
+        right: 4px;
+
+        font-size: 10px;
+        color: #fff;
+      }
+    }
+  }
+  &__link {
+    @extend %link--light;
+
+    text-decoration: none;
+  }
+}

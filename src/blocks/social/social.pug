@@ -1,0 +1,8 @@
+section.social
+  h2.social__title Добавляйтесь к нам в социальных сетях
+  ul.social__list
+    each val, index in ['Твиттер', 'Инстаграмм', 'Фейсбук', 'Вконтакте']
+      li(class={'social__item--tw': index === 0, 'social__item--insta': index === 1,
+                'social__item--fb': index === 2, 'social__item--vk': index === 3}).social__item
+        a(href='#').icon
+          span.icon__text= val

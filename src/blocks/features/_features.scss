@@ -1,0 +1,62 @@
+.features {
+  @extend %index-row;
+
+  padding: 25px 20px;
+
+  background: #efe3cd url('../img/features/img/bg-pattern.jpg') repeat top left;
+  border-radius: $border-radius-base;
+  &__row {
+    @extend %clearfix;
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+  }
+  &__column {
+    width: 49%;
+
+    font-size: 0;
+    line-height: 1;
+    vertical-align: top;
+    &:first-of-type {
+      float: left;
+    }
+    &:last-of-type {
+      float: right;
+    }
+  }
+  &__item {
+    @extend %clearfix;
+
+    position: relative;
+
+    display: inline-block;
+    padding-top: 15px;
+    padding-left: 59px;
+
+    vertical-align: top;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &--ice-cream::before {
+      @extend .icon--ice-cream;
+    }
+    &--eco::before {
+      @extend .icon--eco;
+    }
+    &--cow::before {
+      @extend .icon--cow;
+    }
+    &--thermometer::before {
+      @extend .icon--thermometer;
+    }
+  }
+  p {
+    font-weight: 400;
+    font-size: $font-size-base;
+    line-height: 22px;
+    color: #323232;
+  }
+}

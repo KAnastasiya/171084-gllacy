@@ -1,0 +1,41 @@
+.footer-links {
+  @extend %clearfix;
+
+  float: left;
+  padding: 30px 0;
+  &__title {
+    @extend %sr-only;
+  }
+  &__col {
+    float: left;
+    &:first-of-type {
+      margin-right: 32px;
+    }
+  }
+  &__item {
+    display: block;
+
+    text-decoration: none;
+    span {
+      @extend %link--light;
+
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+    }
+    &--providers {
+      position: relative;
+      span {
+        font-weight: 700;
+      }
+      &::before {
+        @extend .icon--favorite;
+
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: -21px;
+      }
+    }
+  }
+}

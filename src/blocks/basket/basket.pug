@@ -1,0 +1,23 @@
+mixin basket-row(image, name, weight, price, total)
+  tr
+    td
+      button(type='button').icon.icon--remove
+        span.icon__text Удалить
+    td.basket__image
+      img(src='img/basket/img/' + image + '.png', alt=image +' ice cream', width='33', height='33')
+    td.basket__name= name
+    td.basket__price= weight
+      span= ' ' + price
+    td.basket__total-price= total
+
+div.basket
+  table
+    tfoot.basket__footer
+      tr
+        td(colspan='5') Итого: 750 руб.
+    tbody.basket__body
+      +basket-row('ice1', 'Пломбир с апельсиновым джемом', '1,5 кг х', '200 руб.', '300 руб.')
+      +basket-row('ice2', 'Клубничный пломбир с присыпкой из белого шоколада', '1,5 кг х', '300 руб.', '450 руб.')
+  div.basket__controls
+    a(href='order.html', target='blank').btn.btn--order Оформить заказ
+

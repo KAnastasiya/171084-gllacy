@@ -1,0 +1,9 @@
+section.subscribe
+  h2.subscribe__title Подпишитесь на нашу рассылку
+  div.subscribe__content
+    p.subscribe__text Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)
+    form(action='https://echo.htmlacademy.ru', method='post').subscribe__form
+      div.form__field
+        input(type='email', placeholder='Электронная почта', name='email', id='subscribeEmail')
+        label(for='subscribeEmail') Электронная почта
+      button(type='submit').btn.btn--subscribe Отправить

@@ -1,0 +1,60 @@
+extends blocks/layout
+block content
+  include blocks/banners/banner
+  include blocks/products/product
+  include blocks/features/feature
+
+  - for (var i = 1; i < 4; i++)
+    if i === 1
+      - var check = true
+    else
+      - var check = false
+    input(class='slider__point--' + i, type='radio', name='points', id='slider__point--' + i, checked=check).slider__point
+
+  div.page-wrapper
+    - var main = true;
+    include blocks/page-header/page-header
+
+    include blocks/slider/slider
+
+    main
+      div.container
+        section.banners
+          h2.banners__title Баннеры
+          +banner('Малинка даром!', 'При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.', 'Хочу варенье!')
+          +banner('Шоколадки даром!', 'При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.', 'Хочу шоколадки!')
+
+        section.hits
+          - var hit = true;
+          h2.hits__title Хиты продаж
+          +product('citrus', 'Сливочное с апельсиновым джемом и цитрусовой стружкой', '310')
+          +product('coffee', 'Сливочно-кофейное с кусочками шоколада', '380')
+          +product('strawberry', 'Сливочно-клубничное с присыпкой из белого шоколада', '355')
+          +product('creme-brulee', 'Сливочное крем-брюле с карамельной подливкой', '415')
+
+        section.features
+          h2 Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
+          div.features__row
+            div.features__column
+              +feature('ice-cream', 'Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.')
+            div.features__column
+              +feature('cow', 'Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.')
+          div.features__row
+            div.features__column
+              +feature('eco', 'Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.')
+            div.features__column
+              +feature('thermometer', 'Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.')
+
+        div.index-row
+          include blocks/blog/blog
+          include blocks/subscribe/subscribe
+
+      include blocks/map/map
+
+    include blocks/page-footer/page-footer
+    include blocks/feedback/feedback
+
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+  script(src='https://maps.google.com/maps/api/js?sensor=false&amp;language=ru')
+  script(src='js/common.min.js')
+  script(src='js/index.min.js')

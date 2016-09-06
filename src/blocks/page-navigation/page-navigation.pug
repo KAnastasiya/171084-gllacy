@@ -1,0 +1,19 @@
+nav.page-navigation
+  ul.page-navigation__list
+    li(class={'page-navigation__item--active': currentUrl === '/catalog'}).page-navigation__item.page-navigation__item--dropdown
+      a(href='catalog.html').page-navigation__link Каталог
+      ul.dropdown
+        li.dropdown__item
+          a(href='#').dropdown__link Новинки
+        li(class={'dropdown__item--active': currentUrl === '/catalog'}).dropdown__item
+          a(href='catalog.html').dropdown__link Сливочное
+        li.dropdown__item
+          a(href='#').dropdown__link Щербеты
+        li.dropdown__item
+          a(href='#').dropdown__link Фруктовый лед
+        li.dropdown__item
+          a(href='#').dropdown__link Мелорин
+    li(class={'page-navigation__item--active': currentUrl === '/delivery'}).page-navigation__item
+      a(href='#').page-navigation__link Доставка и оплата
+    li(class={'page-navigation__item--active': currentUrl === '/company'}).page-navigation__item
+      a( href='#').page-navigation__link О компании

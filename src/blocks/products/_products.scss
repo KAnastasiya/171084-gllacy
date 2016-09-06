@@ -1,0 +1,146 @@
+.products,
+.hits {
+  margin: -$padding-base / 2;
+  margin-bottom: 25px;
+  &__title {
+    @extend %sr-only;
+  }
+  &__list {
+    @extend %clearfix;
+
+    margin-bottom: 73px;
+    @media(min-width: $screen-md) {
+      margin-bottom: 58px;
+    }
+  }
+}
+
+.hits {
+  @extend %index-row;
+}
+
+.product {
+  position: relative;
+
+  float: left;
+  width: 25%;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 10px $padding-base / 2;
+
+  font-size: $font-size-base;
+  vertical-align: top;
+  text-align: center;
+
+  cursor: pointer;
+  &:nth-of-type(4n+5) {
+    clear: left;
+  }
+  &__container {
+    position: relative;
+
+    margin: 0 auto;
+  }
+  &__content {
+    position: relative;
+  }
+  img {
+    margin-bottom: 10px;
+
+    border-radius: 50%;
+  }
+  p {
+    display: inline;
+    max-height: 65px;
+    overflow: hidden;
+
+    line-height: 22px;
+    text-overflow: ellipsis;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  &__price {
+    position: absolute;
+    bottom: $padding-base;
+    left: 0;
+
+    font-weight: 700;
+    line-height: 45px;
+    text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
+    span {
+      &:first-of-type {
+        position: relative;
+
+        display: inline-block;
+        padding-right: 40px;
+
+        font-size: 45px;
+        &::after {
+          @extend .icon--rub;
+
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 2px;
+
+          transform: translateY(-50%);
+        }
+      }
+      &:last-of-type {
+        font-size: 30px;
+      }
+    }
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -($padding-base + $btn-height);
+    left: 0;
+    z-index: 1;
+
+    display: none;
+
+    background-color: rgba(248, 247, 244, 0.3);
+    border-radius: 5px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  }
+  &__controls {
+    position: absolute;
+    bottom: $padding-base;
+
+    width: 100%;
+    padding: 0 10px;
+
+    text-align: center;
+  }
+  &:hover {
+    p {
+      border-bottom: none;
+    }
+    .product__overlay {
+      display: block;
+    }
+  }
+}
+
+.hit {
+  margin-bottom: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+
+    width: 61px;
+    height: 61px;
+
+    background: url('../img/products/img/hit.png') no-repeat top left;
+    border-radius: 50%;
+  }
+}
+
+.btn--show {
+  padding: 0 14px;
+}

@@ -1,0 +1,12 @@
+mixin product(image, name, price)
+  figure(class={hit: hit}).product
+    div.product__container
+      div.product__content
+        img(src='img/products/img/' + image + '.jpg', alt=image + ' ice cream', width='267', height='267')
+        div.product__price
+          span!= price
+          span /кг
+      p= name
+    div.product__overlay
+      div.product__controls
+        button(type='button').btn.btn--show Быстрый просмотр

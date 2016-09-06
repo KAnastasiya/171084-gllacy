@@ -1,0 +1,48 @@
+@import './common/scss/variables';
+@import './common/scss/mixins';
+
+/* ------------- Normalize css ---------- */
+@import './common/scss/normalize';
+
+/* ------------- SVG-sprite ------------- */
+@import './common/scss/sprite';
+
+/* -------------- Animation ------------ */
+@import './common/scss/animate';
+
+/* ----------- Common styles ------------ */
+@import './common/scss/extends';
+@import './common/scss/common';
+@import './common/scss/form';
+
+@import './blocks/page-header/page-header';
+@import './blocks/logo/logo';
+@import './blocks/page-navigation/page-navigation';
+@import './blocks/user/user';
+@import './blocks/search/search';
+@import './blocks/login/login';
+@import './blocks/basket/basket';
+@import './blocks/phone/phone';
+
+@import './blocks/page-footer/page-footer';
+@import './blocks/social/social';
+@import './blocks/footer-links/footer-links';
+@import './blocks/copyright/copyright';
+
+@import './blocks/breadcrumbs/breadcrumbs';
+@import './blocks/products/products';
+@import './blocks/modal/modal';
+
+/* -------------- Index ------------- */
+@import './blocks/slider/slider';
+@import './blocks/banners/banner';
+@import './blocks/features/features';
+@import './blocks/blog/blog';
+@import './blocks/subscribe/subscribe';
+@import './blocks/map/map';
+@import './blocks/contacts/contacts';
+@import './blocks/feedback/feedback';
+
+/* -------------- Catalog ------------- */
+@import './blocks/filters/filters';
+@import './blocks/pagination/pagination';

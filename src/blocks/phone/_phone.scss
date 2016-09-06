@@ -1,0 +1,18 @@
+.phone {
+  position: absolute;
+  top: 74px;
+  right: $container-padding-vertical;
+
+  font-weight: 700;
+  text-align: right;
+  &__text {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    line-height: 1;
+  }
+  &__number {
+    font-size: 22px;
+    line-height: 16px;
+  }
+}

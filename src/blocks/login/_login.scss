@@ -1,0 +1,37 @@
+.login {
+  @extend %header-windows-position;
+  &__form {
+    @extend %header-windows;
+
+    width: 280px;
+    label {
+      @extend %sr-only;
+    }
+  }
+  &__controls {
+    @extend %clearfix;
+
+    margin-top: $padding-base;
+  }
+  &__links {
+    float: right;
+
+    text-align: left;
+    a {
+      display: block;
+
+      line-height: 1;
+      text-decoration: none;
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+      span {
+        @extend %link--dark;
+
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+  }
+}

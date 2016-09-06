@@ -1,0 +1,14 @@
+mixin slide(text, i)
+  div.slider__item
+    p= text
+    a(href='#').btn.btn--slider Давайте оба!
+
+section.slider
+  h2.slider__title Слайдер
+  +slide('Крем-брюле и пломбир с малиновым джемом', 1)
+  +slide('Шоколадный пломбир и лимонный сорбет', 2)
+  +slide('Пломбир с помадкой и клубничный щербет', 3)
+  div.container
+    div.slider__controls
+      - for (var i = 1; i < 4; i++)
+        label(for='slider__point--' + i)

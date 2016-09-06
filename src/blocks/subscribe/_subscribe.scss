@@ -1,0 +1,51 @@
+.subscribe {
+  float: right;
+  width: 49%;
+  padding: 5px;
+
+  background: #efe4cc url('../img/subscribe/img/bg.jpg') no-repeat top left;
+  background-size: cover;
+  border-radius: $border-radius-base;
+  &__title {
+    @extend %sr-only;
+  }
+  &__content {
+    min-height: 210px;
+    padding: 30px 24px;
+
+    background-color: #f8f7f4;
+    border-radius: 9px;
+  }
+  &__text {
+    margin-bottom: 10px;
+
+    font-weight: 400;
+    line-height: 22px;
+    color: #5a5a5a;
+    @media (min-width: $screen-md) {
+      margin-bottom: 36px;
+    }
+  }
+  &__form {
+    @extend %clearfix;
+    .form__field {
+      display: inline-block;
+      width: 62%;
+      margin-bottom: 0;
+      @media(min-width: $screen-md) {
+        width: 70%;
+      }
+    }
+    input {
+      width: 100%;
+    }
+    label {
+      @extend %sr-only;
+    }
+  }
+}
+
+.btn--subscribe {
+  float: right;
+  padding: 0 20px;
+}

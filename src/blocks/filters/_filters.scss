@@ -1,0 +1,244 @@
+.filters {
+  margin-bottom: 38px;
+
+  font-size: 0;
+  &__row {
+    @extend %clearfix;
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+  }
+  &__group {
+    display: inline-block;
+    margin: 0;
+
+    font-size: 0;
+    line-height: 1;
+    vertical-align: top;
+
+    border: none;
+    &:not(:last-of-type) {
+      margin-right: 16px;
+    }
+  }
+  &__group-title {
+    @extend %filter-title;
+
+    margin-bottom: 6px;
+    padding-left: 16px;
+  }
+  &__group-container {
+    @extend %filter-input-container;
+  }
+  &__group-item {
+    display: inline-block;
+
+    vertical-align: top;
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+  label {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    color: #fff;
+    &[for^='fillers'] {
+      min-width: 95px;
+    }
+  }
+  input[type='checkbox'],
+  input[type='radio'] {
+    display: none;
+    & + label {
+      display: inline-block;
+      padding-left: 30px;
+
+      font-size: $font-size-base;
+      line-height: 20px;
+      vertical-align: top;
+
+      cursor: pointer;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 18px;
+        height: 18px;
+
+        border: 1px solid #fff;
+        border-radius: 4px;
+      }
+    }
+    &[disabled] + label {
+      opacity: 0.4;
+    }
+    &:not([disabled]) + label:hover::before {
+      box-shadow: inset 0 0 1px 1px #fff;
+    }
+    &:checked + label::after {
+      content: '';
+      position: absolute;
+    }
+  }
+  input[type='checkbox']:checked + label::after {
+    @extend .icon--check;
+
+    top: 5px;
+    left: 4px;
+  }
+  input[type='radio'] {
+    & + label::before {
+      border-radius: 50%;
+    }
+    &:checked + label::after {
+      top: 5px;
+      left: 5px;
+
+      width: 10px;
+      height: 10px;
+
+      background-color: #fff;
+      border-radius: 50%;
+    }
+  }
+  .select {
+    position: relative;
+    select {
+      @extend %filter-input-container;
+
+      width: 195px;
+
+      font-size: $font-size-base;
+      line-height: 20px;
+      color: #fff;
+
+      border: none;
+      cursor: pointer;
+
+      appearance: none;
+      > option {
+        line-height: 22px;
+      }
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        color: #323232;
+
+        background-color: #fff;
+        + .select__icon::after {
+          @extend .icon--arrow-down-dark;
+        }
+      }
+      &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+      }
+      &::-ms-expand {
+        display: none;
+      }
+      option {
+        color: #323232;
+        &:hover {
+          background-color: #fbded7;
+        }
+        &:active,
+        &:checked {
+          background-color: #f6b5a5;
+        }
+      }
+    }
+    &__icon::after {
+      @extend .icon--arrow-down;
+
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 16px;
+
+      transform: translateY(-50%);
+    }
+  }
+  .slider-range {
+    width: 216px;
+    &__title {
+      @extend %filter-title;
+
+      margin-bottom: 8px;
+    }
+    &__value {
+      @extend %filter-title;
+
+      max-width: 150px;
+      height: 16px;
+      margin: 0;
+      padding: 0;
+
+      background-color: transparent;
+      border: none;
+    }
+    &__body {
+      @extend %filter-input-container;
+
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    #slider-range {
+      border: 2px solid rgba(248, 247, 244, 0.5);
+      border-radius: 0;
+      span {
+        top: 0;
+
+        width: 20px;
+        height: 20px;
+
+        border-radius: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          width: 22px;
+          height: 22px;
+
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        &:focus {
+          outline: none;
+        }
+        &:active {
+          background-color: #fff;
+          border-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.btn--filters-apply {
+  width: 145px;
+  margin-top: $padding-base + 2px;
+  margin-left: 8px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #fff;
+  box-shadow: none;
+  &:hover,
+  &:focus {
+    color: #323232;
+
+    background: #fff;
+    box-shadow: none;
+  }
+  &:active {
+    background-color: #ededed;
+    box-shadow: inset 0 2px 1px dimgrey;
+  }
+}

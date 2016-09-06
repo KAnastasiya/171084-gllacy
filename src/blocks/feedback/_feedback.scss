@@ -1,0 +1,24 @@
+.feedback-form {
+  input,
+  textarea {
+    &.filled + label {
+      @extend %input-label-small;
+    }
+    &:focus + label {
+      @extend %input-label-small;
+
+      color: #5b9ddf;
+    }
+  }
+  .form__field {
+    padding-top: 12px;
+  }
+  input {
+    width: 270px;
+  }
+  &__controls {
+    margin-top: $padding-base;
+
+    text-align: right;
+  }
+}

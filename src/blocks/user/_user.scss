@@ -1,0 +1,133 @@
+.user {
+  @extend %header-vertical-align;
+
+  float: right;
+
+  font-size: 0;
+  &__item {
+    position: relative;
+
+    display: inline-block;
+    padding-bottom: 5px;
+
+    vertical-align: top;
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.filled {
+      .user__btn {
+        color: #323232;
+
+        background-color: #f8f7f4;
+      }
+    }
+    &--search {
+      .user__btn {
+        &::before {
+          @extend .icon--search;
+
+          left: 50%;
+
+          transform: translate(-50%, -50%);
+        }
+      }
+      &:hover,
+      &:focus {
+        .user__btn {
+          &::before {
+            @extend .icon--search-active;
+          }
+          + .search {
+            display: block;
+          }
+        }
+      }
+    }
+    &--login {
+      .user__btn {
+        padding-right: 15px;
+        padding-left: 45px;
+        &::before {
+          @extend .icon--login;
+        }
+      }
+      &:hover,
+      &:focus {
+        .user__btn {
+          &::before {
+            @extend .icon--login-active;
+          }
+          + .login {
+            display: block;
+          }
+        }
+      }
+    }
+    &--basket {
+      .user__btn {
+        padding-right: 30px;
+        padding-left: 45px;
+        &::before {
+          @extend .icon--basket;
+
+          z-index: 2;
+        }
+      }
+      &:hover,
+      &:focus,
+      &.filled {
+        .user__btn {
+          &::before {
+            @extend .icon--basket-active;
+          }
+          &::after {
+            @extend %basket-red;
+
+            z-index: 1;
+          }
+        }
+      }
+      &:hover .user__btn {
+        + .basket {
+          display: block;
+        }
+      }
+    }
+  }
+  &__btn {
+    position: relative;
+
+    display: inline-block;
+    min-width: 32px;
+    height: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 32px;
+    vertical-align: top;
+    color: #fff;
+    text-decoration: none;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 15px;
+
+      transform: translateY(-50%);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__btn-text {
+    @extend %sr-only;
+  }
+}

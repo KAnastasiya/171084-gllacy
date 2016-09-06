@@ -1,0 +1,11 @@
+.search {
+  @extend %header-windows-position;
+  &__form {
+    @extend %header-windows;
+
+    width: 340px;
+  }
+  label {
+    @extend %sr-only;
+  }
+}

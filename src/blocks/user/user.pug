@@ -1,0 +1,16 @@
+nav.user
+  ul.user__controls
+    li.user__item.user__item--search
+      a(href='search.html', target='_blank').user__btn
+        span.user__btn-text Найти
+      include ../search/search
+    li.user__item.user__item--login
+      a(href='login.html', target='_blank').user__btn Вход
+      include ../login/login
+    if main
+      - var basket = 'Пусто'
+    else
+      - var basket = '2 товара'
+    li(class={filled: basket === '2 товара'}).user__item.user__item--basket
+      a(href='basket.html', target='_blank').user__btn= basket
+      include ../basket/basket

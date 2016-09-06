@@ -1,0 +1,30 @@
+@mixin link($bg) {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  @if $bg == 'dark' {
+    color: #323232;
+
+    border-color: rgba(50, 50, 50, 0.4);
+    &:hover,
+    &:active {
+      color: #e84d37;
+
+      border-color: rgba(232, 77, 55, 0.4);
+    }
+  } @else if $bg == 'light' {
+    color: #fff;
+
+    border-color: rgba(255, 255, 255, 0.3);
+    &:hover,
+    &:active {
+      color: #ffbc9e;
+
+      border-color: rgba(255, 188, 158, 0.4);
+    }
+  }
+}
+
+@mixin vertical-align($container-height, $element-height) {
+  margin-top: (($container-height - $element-height) / 2);
+  margin-bottom: (($container-height - $element-height) / 2);
+}

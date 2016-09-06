@@ -1,0 +1,22 @@
+.copyright {
+  float: right;
+  width: 200px;
+  margin: 20px 0;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fefefe;
+  &__title {
+    @extend %sr-only;
+  }
+  &__link {
+    @extend %link--light;
+
+    font-size: 12px;
+    text-decoration: none;
+  }
+  &__logo-text {
+    @extend %sr-only;
+  }
+}

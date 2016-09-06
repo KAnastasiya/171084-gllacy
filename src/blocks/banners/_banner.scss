@@ -1,0 +1,40 @@
+.banners {
+  @extend %index-row;
+  &__title {
+    @extend %sr-only;
+  }
+}
+
+.banner {
+  position: relative;
+
+  width: 49%;
+  padding: $padding-base;
+
+  border-radius: $border-radius-base;
+  &:first-of-type {
+    float: left;
+
+    background: #460f15 url('../img/banners/img/bg-raspberries.jpg') no-repeat top left;
+    background-size: cover;
+  }
+  &:last-of-type {
+    float: right;
+
+    background: #3e251c url('../img/banners/img/bg-chocolate.jpg') no-repeat top left;
+    background-size: cover;
+  }
+  &__text {
+    margin-bottom: 24px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    @media (min-width: $screen-md) {
+      margin-bottom: 45px;
+    }
+  }
+  &__controls {
+    text-align: right;
+  }
+}
