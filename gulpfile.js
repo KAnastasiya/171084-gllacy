@@ -1,5 +1,3 @@
-'use strict';
-
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const imageminJpegRecompress = require('imagemin-jpeg-recompress');
@@ -39,7 +37,6 @@ gulp.task('scss', ['cleanCss'], () => {
     { cascade: false }
   ))
   .pipe(plugins.csscomb('./.csscomb.json'))
-  .pipe(gulp.dest('./css'))
   .pipe(plugins.cssnano())
   .pipe(plugins.rename({suffix: '.min'}))
   .pipe(plugins.sourcemaps.write())
@@ -52,7 +49,7 @@ gulp.task('cleanScript', () => {
   return del('./js');
 });
 
-gulp.task('script', ['cleanScript'], () => {
+gulp.task('script', () => {
   return gulp.src(['src/index.js', 'src/catalog.js', 'src/common.js'])
   .pipe(plugins.plumber({
     errorHandler: plugins.notify.onError(err => ({
@@ -62,19 +59,6 @@ gulp.task('script', ['cleanScript'], () => {
   }))
   .pipe(named())
   .pipe(webpack(require('./webpack.config.js')))
-  .pipe(gulp.dest('./js'));
-});
-
-gulp.task('scriptMin', () => {
-  return gulp.src(['src/index.js', 'src/catalog.js', 'src/common.js'])
-  .pipe(plugins.plumber({
-    errorHandler: plugins.notify.onError(err => ({
-      title: 'Webpack',
-      message: err.message
-    }))
-  }))
-  .pipe(named())
-  .pipe(webpack(require('./webpack.config-uglify.js')))
   .pipe(plugins.rename({suffix: '.min'}))
   .pipe(gulp.dest('./js'));
 });
@@ -143,16 +127,16 @@ gulp.task('browserSync', () => {
       baseDir: './',
       index: 'index.html'
     },
-    notify: false
+    open: false
   });
 });
 
 // Watch mode
 // TODO: previously need start task 'script'
-gulp.task('watch', gulpsync.sync(['browserSync']), () => {
-  // gulp.watch(['src/common/icon/*', 'src/blocks/*/icon/*'], ['svgSprite', 'scss', browserSync.reload]);
-  // gulp.watch(['src/common/img/*', 'src/blocks/*/img/*'], ['img', browserSync.reload]);
-  // gulp.watch(['src/*.pug', 'src/blocks/**/*.pug'], ['pug', browserSync.reload]);
-  // gulp.watch(['src/*.scss', 'src/common/scss/*.scss', 'src/blocks/*/*.scss'], ['scss', browserSync.reload]);
-  // gulp.watch(['src/*.js', 'src/common/js/*.js', 'src/blocks/*/*.js'], ['script', browserSync.reload]);
+gulp.task('default', gulpsync.sync(['img', 'svgSprite', 'pug', 'scss', 'browserSync']), () => {
+  gulp.watch(['src/common/icon/*', 'src/blocks/*/icon/*'], ['svgSprite', 'scss', browserSync.reload]);
+  gulp.watch(['src/common/img/*', 'src/blocks/*/img/*'], ['img', browserSync.reload]);
+  gulp.watch(['src/*.pug', 'src/blocks/**/*.pug'], ['pug', browserSync.reload]);
+  gulp.watch(['src/*.scss', 'src/common/scss/*.scss', 'src/blocks/*/*.scss'], ['scss', browserSync.reload]);
+  gulp.watch(['src/*.js', 'src/common/js/*.js', 'src/blocks/*/*.js'], ['script', browserSync.reload]);
 });

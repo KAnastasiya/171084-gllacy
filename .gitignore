@@ -1,12 +1,9 @@
 node_modules/
-.DS_Store
-Thumbs.db
-.idea
+.gulp-scss-cache/
+.sass-cache/
+
 *.sublime*
 *.log
 *.psd
 *.ai
 *.pdf
-
-.gulp-scss-cache/
-.sass-cache/

@@ -24,6 +24,15 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        drop_console: true,
+        drop_debugger: true,
+        unused: true,
+        collapse_vars: true,
+      }
+    })
   ]
 };
