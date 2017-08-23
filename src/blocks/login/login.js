@@ -31,6 +31,7 @@ let _setFocusInFirstEmptyField = () => {
       element.focus();
       return false;
     }
+    return true;
   });
 };
 

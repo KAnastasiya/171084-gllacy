@@ -1,4 +1,4 @@
-import './gmap3.min';
+import '../../library/gmap3.min';
 
 $('.google-map').gmap3({
   map: {

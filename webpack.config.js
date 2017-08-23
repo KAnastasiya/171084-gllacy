@@ -1,38 +1,37 @@
 const webpack = require('webpack');
-const path = require('path');
 
 module.exports = {
-  watch: true,
   devtool: 'cheap-inline-module-source-map',
 
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loader: 'babel',
+    rules: [{
+      test: /\.(js)$/,
       exclude: /node_modules/,
-      query: { presets: ['es2015'] }
-    }],
-    preLoaders: [{
+      use: [{
+        loader: 'babel-loader',
+        options: {
+          cacheDirectory: true,
+          presets: [
+            ['es2015', { modules: false }],
+          ],
+          plugins: [
+            require('babel-plugin-transform-object-rest-spread'),
+            require('babel-plugin-transform-runtime'),
+          ],
+        },
+      }],
+    }, {
+      enforce: 'pre',
       test: /\.js$/,
-      loader: 'eslint',
-      include: path.resolve(__dirname, '/src/js')
-    }]
-  },
-
-  eslint: {
-    configFile: '/.eslintrc'
+      exclude: /(node_modules)/,
+      include: /src/,
+      loader: 'eslint-loader',
+    }],
   },
 
   plugins: [
-    new webpack.NoErrorsPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        drop_console: true,
-        drop_debugger: true,
-        unused: true,
-        collapse_vars: true,
-      }
-    })
-  ]
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.ModuleConcatenationPlugin(),
+  ],
 };

@@ -71,6 +71,7 @@ let _setFocusInFirstEmptyField = () => {
       element.focus();
       return false;
     }
+    return true;
   });
 };
 
@@ -84,9 +85,10 @@ let _showModal = (modal) => {
 
   page.addClass('lock');
   modal.addClass('modal--active');
-  modal.find('.modal__container')
-      .removeClass('bounceOutRight')
-      .addClass('animated bounceInRight');
+  modal
+    .find('.modal__container')
+    .removeClass('bounceOutRight')
+    .addClass('animated bounceInRight');
   _setSavedUserInfo();
   _setFocusInFirstEmptyField();
 };
@@ -96,9 +98,10 @@ let _showModal = (modal) => {
  * @param  {Element} modal
  */
 let _hideModal = (modal) => {
-  modal.find('.modal__container')
-      .removeClass('bounceInRight')
-      .addClass('bounceOutRight');
+  modal
+    .find('.modal__container')
+    .removeClass('bounceInRight')
+    .addClass('bounceOutRight');
 
   setTimeout(function() {
     $('body').width('');
