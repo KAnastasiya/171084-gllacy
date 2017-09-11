@@ -53,15 +53,15 @@
     }
     &--1:checked ~ .page-wrapper {
       background-color: #849d8f;
-      background-image: url('../img/slider/img/slide1.png');
+      background-image: url('img/slider/img/slide1.png');
     }
     &--2:checked ~ .page-wrapper {
       background-color: #8996a6;
-      background-image: url('../img/slider/img/slide2.png');
+      background-image: url('img/slider/img/slide2.png');
     }
     &--3:checked ~ .page-wrapper {
       background-color: #9d8b84;
-      background-image: url('../img/slider/img/slide3.png');
+      background-image: url('img/slider/img/slide3.png');
     }
     &--1:checked ~ .page-wrapper label[for='slider__point--1'],
     &--2:checked ~ .page-wrapper label[for='slider__point--2'],

@@ -15,13 +15,13 @@
   &:first-of-type {
     float: left;
 
-    background: #460f15 url('../img/banners/img/bg-raspberries.jpg') no-repeat top left;
+    background: #460f15 url('img/banners/img/bg-raspberries.jpg') no-repeat top left;
     background-size: cover;
   }
   &:last-of-type {
     float: right;
 
-    background: #3e251c url('../img/banners/img/bg-chocolate.jpg') no-repeat top left;
+    background: #3e251c url('img/banners/img/bg-chocolate.jpg') no-repeat top left;
     background-size: cover;
   }
   &__text {

@@ -3,7 +3,7 @@
   width: 49%;
   padding: 5px;
 
-  background: #efe4cc url('../img/subscribe/img/bg.jpg') no-repeat top left;
+  background: #efe4cc url('img/subscribe/img/bg.jpg') no-repeat top left;
   background-size: cover;
   border-radius: $border-radius-base;
   &__title {
@@ -32,7 +32,7 @@
       display: inline-block;
       width: 62%;
       margin-bottom: 0;
-      @media(min-width: $screen-md) {
+      @media (min-width: $screen-md) {
         width: 70%;
       }
     }
